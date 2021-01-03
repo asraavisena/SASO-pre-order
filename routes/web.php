@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/react', function () {
     return view('react-welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
