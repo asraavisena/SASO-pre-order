@@ -17,7 +17,7 @@ class CreateMenusTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('desc');
-            $table->text('event_image')->nullable();
+            $table->text('menu_image')->nullable();
             $table->bigInteger('quantity')->nullable();;
             $table->bigInteger('price')->nullable();;
             $table->timestamps();
