@@ -25,4 +25,8 @@ Auth::routes();
 
 Route::middleware('auth')->group(function(){
     Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.index'); 
+
+    Route::get('/admin/events', [App\Http\Controllers\EventController::class, 'index'])->name('events.index');
+
+    Route::get('/admin/menus', [App\Http\Controllers\MenuController::class, 'index'])->name('menus.index');
 });
