@@ -27,6 +27,8 @@ Route::middleware('auth')->group(function(){
     Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.index'); 
 
     Route::get('/admin/events', [App\Http\Controllers\EventController::class, 'index'])->name('events.index');
+    Route::get('/admin/events/create', [App\Http\Controllers\EventController::class, 'create'])->name('events.create');
+    Route::post('/admin/events', [App\Http\Controllers\EventController::class, 'store'])->name('events.store');
 
     Route::get('/admin/menus', [App\Http\Controllers\MenuController::class, 'index'])->name('menus.index');
 });
