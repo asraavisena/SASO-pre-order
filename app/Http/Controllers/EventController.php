@@ -9,7 +9,7 @@ use App\Models\Event;
 class EventController extends Controller
 {
     //
-    public function index(){
+    public function index() {
         
         $events = Event::all();
         return view('admin.events.index',['events' => $events]);

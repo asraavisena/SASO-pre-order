@@ -19,7 +19,7 @@ class CreateMenusTable extends Migration
             $table->text('desc');
             $table->text('menu_image')->nullable();
             $table->bigInteger('quantity')->nullable();;
-            $table->bigInteger('price')->nullable();;
+            $table->float('price', 8, 2)->nullable();;
             $table->timestamps();
         });
     }

@@ -31,4 +31,6 @@ Route::middleware('auth')->group(function(){
     Route::post('/admin/events', [App\Http\Controllers\EventController::class, 'store'])->name('events.store');
 
     Route::get('/admin/menus', [App\Http\Controllers\MenuController::class, 'index'])->name('menus.index');
+    Route::get('/admin/menus/create', [App\Http\Controllers\MenuController::class, 'create'])->name('menus.create');
+    Route::post('/admin/menus', [App\Http\Controllers\MenuController::class, 'store'])->name('menus.store');
 });
