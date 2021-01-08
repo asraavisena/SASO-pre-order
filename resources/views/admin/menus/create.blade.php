@@ -50,7 +50,7 @@
                 </span>
             @enderror
         </dif>
-        <input type="submit" name="submit">
+        <input class="btn btn-primary mb-5 mt-2" type="submit" name="submit">
     </form>
     @endsection
 </x-admin-master>
