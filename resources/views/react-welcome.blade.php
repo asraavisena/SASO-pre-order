@@ -22,6 +22,13 @@
         </style>
     </head>
     <body class="antialiased">
+    @foreach($menus as $menu)
+    <div>{{$menu->name}}</div>
+    @endforeach
+
+    @foreach($events as $event)
+    <div>{{$event->name}}</div>
+    @endforeach
         <div id="root" class="content">
             
         </div>
