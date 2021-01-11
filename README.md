@@ -13,6 +13,7 @@ DB_PORT=3306
 DB_DATABASE=your_db_name
 DB_USERNAME=your_user_name
 DB_PASSWORD=your_password
+FILESYSTEM_DRIVER=public
 
 For using this app, *Please migrate the schema using: php artisan migrate*
 
