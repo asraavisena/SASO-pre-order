@@ -29,6 +29,10 @@ class MenuController extends Controller
             'quantity' => 'required',
         ]);
 
+        if(request('menu_image')){
+            $inputs['menu_image'] = request('menu_image')->store('images');
+        }
+
         Menu::create($inputs);
         session()->flash('menu-created-message', 'Menu was created');
         return redirect()->route('menus.index');

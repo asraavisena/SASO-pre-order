@@ -31,6 +31,10 @@ class EventController extends Controller
             'started_at' => 'required',
         ]);
 
+        if(request('event_image')){
+            $inputs['event_image'] = request('event_image')->store('images');
+        }
+
         Event::create($inputs);
         session()->flash('event-created-message', 'Event was created');
         return redirect()->route('events.index');
