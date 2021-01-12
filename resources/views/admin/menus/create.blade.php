@@ -41,7 +41,21 @@
                 </span>
             @enderror
         </div>
-        <dif class="form group">
+        <div class="form-group">
+            <label for="category_id">Select category: </label>
+            <select id="category_id" name="category_id" class="form-control @error('category_id') is-invalid @enderror">
+                @foreach($categories as $category)
+                    <option name="category_id" value="{{$category->id}}">{{$category->name}}</option>
+                @endforeach 
+            </select>
+            @error('category_id')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        </div>
+        
+        <div class="form group">
             <label for="desc">Description</label>
             <textarea name="desc" class="form-control @error('desc') is-invalid @enderror" id="body" cols="30" rows="10"></textarea>
             @error('desc')
@@ -49,7 +63,7 @@
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
-        </dif>
+        </div>
         <input class="btn btn-primary mb-5 mt-2" type="submit" name="submit">
     </form>
     @endsection

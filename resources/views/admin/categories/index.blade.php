@@ -1,8 +1,8 @@
 <x-admin-master>
     @section('content')
-        <h1 class="h3 mb-4 text-gray-800">Menus</h1>
-        @if(session('menu-created-message'))
-          <div class="alert alert-success">{{session('menu-created-message')}}</div>
+        <h1 class="h3 mb-4 text-gray-800">Categories</h1>
+        @if(session('category-created-message'))
+          <div class="alert alert-success">{{session('category-created-message')}}</div>
         @endif
 
         <div class="card shadow mb-4">
@@ -16,10 +16,7 @@
                     <tr>
                         <th>Id</th>
                         <th>Name</th>
-                        <th>Image</th>
-                        <th>Quantity</th>
-                        <th>Price in Euro (€)</th>
-                        <th>Category</th>
+                        <th>Slug</th>
                         <th>Created At</th>
                         <th>Updated At</th>
                     </tr>
@@ -28,25 +25,19 @@
                     <tr>
                         <th>Id</th>
                         <th>Name</th>
-                        <th>Image</th>
-                        <th>Quantity</th>
-                        <th>Price in Euro(€)</th>
-                        <th>Category</th>
+                        <th>Slug</th>
                         <th>Created At</th>
                         <th>Updated At</th>
                     </tr>
                     </tfoot>
                     <tbody>
-                    @foreach($menus as $menu)
+                    @foreach($categories as $category)
                         <tr>
-                            <td>{{$menu->id}}</td>
-                            <td>{{$menu->name}}</td>
-                            <td><img width="100px" src="{{$menu->menu_image}}" alt=""></td>
-                            <td>{{$menu->quantity}}</td>
-                            <td>{{$menu->price}}</td>
-                            <td>{{$menu->category ? $menu->category->name : 'Uncategorized'}}</td>
-                            <td>{{$menu->created_at->diffForHumans()}}</td>
-                            <td>{{$menu->updated_at->diffForHumans()}}</td>
+                            <td>{{$category->id}}</td>
+                            <td>{{$category->name}}</td>
+                            <td>{{$category->slug}}</td>
+                            <td>{{$category->created_at->diffForHumans()}}</td>
+                            <td>{{$category->updated_at->diffForHumans()}}</td>
                         </tr>
                     @endforeach
                     </tbody>
@@ -54,6 +45,7 @@
                 </div>
             </div>
         </div>
+
 
         @endsection
 </x-admin-master>
