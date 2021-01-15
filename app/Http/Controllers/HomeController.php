@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Menu;
 use App\Models\Event;
+use App\Models\Category;
 
 class HomeController extends Controller
 {
@@ -27,6 +28,7 @@ class HomeController extends Controller
     {
         $events = Event::all();
         $menus = Menu::all();
-        return view('react-welcome', ['events' => $events, 'menus' => $menus]);
+        $categories = Category::all();
+        return view('react-welcome', ['events' => $events, 'menus' => $menus, 'categories' => $categories]);
     }
 }

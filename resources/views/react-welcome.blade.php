@@ -22,14 +22,12 @@
         </style>
     </head>
     <body class="antialiased">
-    @foreach($menus as $menu)
-    <div>{{$menu->name}}</div>
-    @endforeach
-
-    @foreach($events as $event)
-    <div>{{$event->name}}</div>
-    @endforeach
-        <div id="root" class="content">
+    <script>
+        window.menus= <?= json_encode($menus) ?>;
+        window.events= <?= json_encode($events) ?>;
+        window.categories= <?= json_encode($categories) ?>;
+    </script>
+        <div id="root">
             
         </div>
     </body>
