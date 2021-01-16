@@ -1,0 +1,57 @@
+.menu {
+    display: flex;
+    flex: 0 0 50%;
+    padding: 5px 5px;
+    .menu-wrapper {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        padding: 5px 5px;
+        box-shadow: 0 1.30263px 5.21053px rgba(0, 0, 0, 0.1);
+        border: 1.30263px solid #DEE2EE;
+        border-radius: 5.21053px;
+        background-color: white;
+        width: 100%;
+        .image-wrapper {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            .image {
+                max-width: 100%;
+                max-width: 100%;
+                margin: auto;
+            }
+        }
+        .menu-name {
+            text-align: center;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 15px;
+            color: #404040;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            min-height: 30px;
+            -webkit-line-clamp: 2;
+            margin-bottom: 3px;
+            overflow: hidden;
+        }
+        .menu-price{
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .menu-quantity{
+            opacity: 0.5;
+            font-size: 12px;
+        }
+        :last-child {
+            margin-right: 0;
+        }
+    }
+    @media all and (min-width: 480px) {
+        flex: 0 0 33.3333%;
+    }
+    @media all and (min-width: 768px) {
+        flex: 0 0 25%;
+    }
+}

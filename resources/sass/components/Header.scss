@@ -1,0 +1,15 @@
+.header{
+    position: fixed;
+    width: 100%;
+    border-top: 2px solid rgb(255, 136, 0);
+    background-color: white;
+    box-shadow: rgba(68, 68, 68, 0.494) 0px 1px 10px;
+    font-size: 12px;
+    .header-wrapper{
+        padding: 11px 12px;
+        .img-holder {
+            max-width: 28px;
+            margin: auto;
+        }
+    }
+}

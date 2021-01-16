@@ -1,0 +1,15 @@
+.category{
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    .category-name {
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .sliders{
+        display: flex;
+        overflow-x: auto;
+    }
+    :last-child{
+        margin-bottom: 0;
+    }
+}
