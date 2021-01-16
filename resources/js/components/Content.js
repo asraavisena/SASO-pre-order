@@ -10,6 +10,7 @@ const Content = () => {
         categories
     } = window;
     console.log(categories);
+    //load category
     const category = categories.map((cgr) =>
         <Category
             key={cgr.id}
@@ -20,7 +21,11 @@ const Content = () => {
     );
     return (
         <div className="content">
+            {/** add hero banner */}
+            {/** add info page */}
+            {/** add select category button */}
             {category}
+            {/** add order or payment info*/}
         </div>
     );
 };

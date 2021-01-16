@@ -11,6 +11,7 @@ const Header = () => {
                         <img src="https://iwkz.de/static/media/iwkz-navbar.80c680cd.svg"></img>
                     </a>
                 </div>
+                {/** add cart */}
             </div>
         </div>
     );

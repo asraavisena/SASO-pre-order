@@ -24,7 +24,8 @@ const Category = (props) => {
                    {category.name}
                 </div>
                 <div className="sliders">
-                   {menu}
+                    {/** add arrows */}
+                    {menu}
                 </div>
             </div>
         </div>
