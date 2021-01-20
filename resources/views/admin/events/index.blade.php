@@ -2,12 +2,16 @@
     @section('content')
         <h1 class="h3 mb-4 text-gray-800">Events</h1>
         @if(session('event-created-message'))
-          <div class="alert alert-success">{{session('event-created-message')}}</div>
+            <div class="alert alert-success">{{session('event-created-message')}}</div>
+        @elseif(session('event-updated-message'))
+            <div class="alert alert-success">{{session('event-updated-message')}}</div>
+        @elseif(session('event-destroy-message'))
+            <div class="alert alert-danger">{{session('event-destroy-message')}}</div>
         @endif
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+              <h6 class="m-0 font-weight-bold text-primary">EVENT TABLES</h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -18,7 +22,6 @@
                         <th>Name</th>
                         <th>Image</th>
                         <th>Start</th>
-                        <th>Description</th>
                         <th>Created At</th>
                         <th>Updated At</th>
                     </tr>
@@ -29,7 +32,6 @@
                         <th>Name</th>
                         <th>Image</th>
                         <th>Start</th>
-                        <th>Description</th>
                         <th>Created At</th>
                         <th>Updated At</th>
                     </tr>
@@ -38,7 +40,7 @@
                     @foreach($events as $event)
                         <tr>
                             <td>{{$event->id}}</td>
-                            <td>{{$event->name}}</td>
+                            <td><a href="{{route('events.show', $event->id)}}">{{$event->name}}</td>
                             <td><img width="100px" src="{{$event->event_image}}" alt=""></td>
                             <td>{{$event->started_at}}</td>
                             <td>{{$event->created_at->diffForHumans()}}</td>

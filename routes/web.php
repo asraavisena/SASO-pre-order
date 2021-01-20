@@ -24,9 +24,14 @@ Auth::routes();
 Route::middleware('auth')->group(function(){
     Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.index'); 
 
+    // Events
     Route::get('/admin/events', [App\Http\Controllers\EventController::class, 'index'])->name('events.index');
     Route::get('/admin/events/create', [App\Http\Controllers\EventController::class, 'create'])->name('events.create');
+    Route::get('/admin/events/{event}/edit', [App\Http\Controllers\EventController::class, 'edit'])->name('events.edit');
+    Route::get('/admin/events/{event}/show', [App\Http\Controllers\EventController::class, 'show'])->name('events.show');
     Route::post('/admin/events', [App\Http\Controllers\EventController::class, 'store'])->name('events.store');
+    Route::patch('/admin/events/{event}/update', [App\Http\Controllers\EventController::class, 'update'])->name('events.update');
+    Route::delete('/admin/events/{event}/delete', [App\Http\Controllers\EventController::class, 'destroy'])->name('events.destroy');
 
     Route::get('/admin/menus', [App\Http\Controllers\MenuController::class, 'index'])->name('menus.index');
     Route::get('/admin/menus/create', [App\Http\Controllers\MenuController::class, 'create'])->name('menus.create');
