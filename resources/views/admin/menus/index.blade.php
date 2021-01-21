@@ -7,7 +7,7 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+              <h6 class="m-0 font-weight-bold text-primary">MENU TABLES</h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -40,7 +40,7 @@
                     @foreach($menus as $menu)
                         <tr>
                             <td>{{$menu->id}}</td>
-                            <td>{{$menu->name}}</td>
+                            <td><a href="{{route('menus.show', $menu->id)}}">{{$menu->name}}</td>
                             <td><img width="100px" src="{{$menu->menu_image}}" alt=""></td>
                             <td>{{$menu->quantity}}</td>
                             <td>{{$menu->price}}</td>

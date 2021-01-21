@@ -33,9 +33,14 @@ Route::middleware('auth')->group(function(){
     Route::patch('/admin/events/{event}/update', [App\Http\Controllers\EventController::class, 'update'])->name('events.update');
     Route::delete('/admin/events/{event}/delete', [App\Http\Controllers\EventController::class, 'destroy'])->name('events.destroy');
 
+    // Menus
     Route::get('/admin/menus', [App\Http\Controllers\MenuController::class, 'index'])->name('menus.index');
     Route::get('/admin/menus/create', [App\Http\Controllers\MenuController::class, 'create'])->name('menus.create');
+    Route::get('/admin/menus/{menu}/edit', [App\Http\Controllers\MenuController::class, 'edit'])->name('menus.edit');
+    Route::get('/admin/menus/{menu}/show', [App\Http\Controllers\MenuController::class, 'show'])->name('menus.show');
     Route::post('/admin/menus', [App\Http\Controllers\MenuController::class, 'store'])->name('menus.store');
+    Route::patch('/admin/menus/{menu}/update', [App\Http\Controllers\MenuController::class, 'update'])->name('menus.update');
+    Route::delete('/admin/menus/{menu}/delete', [App\Http\Controllers\MenuController::class, 'destroy'])->name('menus.destroy');
 
     Route::get('/admin/categories', [App\Http\Controllers\CategoryController::class, 'index'])->name('categories.index');
     Route::get('/admin/categories/create', [App\Http\Controllers\CategoryController::class, 'create'])->name('categories.create');
