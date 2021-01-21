@@ -42,7 +42,7 @@ Route::middleware('auth')->group(function(){
     Route::patch('/admin/menus/{menu}/update', [App\Http\Controllers\MenuController::class, 'update'])->name('menus.update');
     Route::delete('/admin/menus/{menu}/delete', [App\Http\Controllers\MenuController::class, 'destroy'])->name('menus.destroy');
 
+    // Categories
     Route::get('/admin/categories', [App\Http\Controllers\CategoryController::class, 'index'])->name('categories.index');
-    Route::get('/admin/categories/create', [App\Http\Controllers\CategoryController::class, 'create'])->name('categories.create');
     Route::post('/admin/categories', [App\Http\Controllers\CategoryController::class, 'store'])->name('categories.store');
 });

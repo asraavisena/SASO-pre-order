@@ -7,7 +7,12 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">MENU TABLES</h6>
+                <div class="float-left d-inline">
+                    <h4 class=" h4 m-0 font-weight-bold text-primary">MENU TABLES</h4>
+                </div>
+                <div class="m-0 float-right">
+                    <a class="btn btn-primary btn-sm" href="{{ route('categories.index') }}" role="button">Show Category</a>
+                </div>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
