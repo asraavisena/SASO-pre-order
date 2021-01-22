@@ -1,3 +1,68 @@
 .footer{
-    background-color: rgb(232, 255, 226);
+    .footer-top{
+        background-color: rgb(232, 255, 226);
+        .content{
+            padding: 3rem 1.5rem;
+            text-align: center;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            .informations {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                margin: 12px;
+                opacity: 0.8;
+                .title {
+                    font-size: 20px;
+                }
+            }
+            .ladi-img {
+                width: 150px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            @media (min-width: 768px) {
+                display: flex;
+                flex-flow: row;
+                justify-content: space-between;
+                text-align: start;
+                .informations{
+                    align-items: unset;
+                    .title {
+                        font-size: 25px;
+                    }
+                }
+                .ladi-img {
+                    width: 200px;
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        background-color: rgb(140, 211, 122);
+        color: white;
+        padding: 15px 0px;
+        .content{
+            display: flex;
+            justify-content: space-between;
+            .media-social-wrapper{
+                display: flex;
+                a{
+                    width: 24px;
+                    margin-left: 15px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        background-color: white;
+                        border-radius: 100%;
+                    }
+                }
+            }
+        }
+    }
 }

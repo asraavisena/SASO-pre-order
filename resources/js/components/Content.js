@@ -35,7 +35,7 @@ const Content = () => {
     });
     console.log(currCategory);
     return (
-        <div className="content">
+        <div className="content main-content">
             {/** add hero banner */}
             {/** add info page */}
             {/** add select category button */}

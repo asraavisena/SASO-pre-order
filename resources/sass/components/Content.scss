@@ -1,5 +1,4 @@
 .content{
-    padding-top: 50px;
     max-width: 1185px;
     margin-right: auto;
     margin-left: auto;
@@ -11,6 +10,9 @@
     }
     @media (max-width: 767px) {
         max-width: calc(100% - 40px);
+    }
+    &.main-content{
+        padding-top: 50px;
     }
     .container-option{
         display: flex;

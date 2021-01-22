@@ -6358,7 +6358,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".content {\n  padding-top: 50px;\n  max-width: 1185px;\n  margin-right: auto;\n  margin-left: auto;\n}\n@media (max-width: 1200px) {\n  .content {\n    max-width: calc(100% - 140px);\n  }\n}\n@media (max-width: 1024px) {\n  .content {\n    max-width: calc(100% - 112px);\n  }\n}\n@media (max-width: 767px) {\n  .content {\n    max-width: calc(100% - 40px);\n  }\n}\n.content .container-option {\n  display: flex;\n  flex-direction: column;\n  margin: 20px 0;\n  align-items: center;\n  justify-content: center;\n}\n.content .container-option label {\n  white-space: nowrap;\n  margin-right: 10px;\n  font-weight: bold;\n  font-size: 15px;\n}", ""]);
+exports.push([module.i, ".content {\n  max-width: 1185px;\n  margin-right: auto;\n  margin-left: auto;\n}\n@media (max-width: 1200px) {\n  .content {\n    max-width: calc(100% - 140px);\n  }\n}\n@media (max-width: 1024px) {\n  .content {\n    max-width: calc(100% - 112px);\n  }\n}\n@media (max-width: 767px) {\n  .content {\n    max-width: calc(100% - 40px);\n  }\n}\n.content.main-content {\n  padding-top: 50px;\n}\n.content .container-option {\n  display: flex;\n  flex-direction: column;\n  margin: 20px 0;\n  align-items: center;\n  justify-content: center;\n}\n.content .container-option label {\n  white-space: nowrap;\n  margin-right: 10px;\n  font-weight: bold;\n  font-size: 15px;\n}", ""]);
 
 // exports
 
@@ -6377,7 +6377,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".footer {\n  background-color: #e8ffe2;\n}", ""]);
+exports.push([module.i, ".footer .footer-top {\n  background-color: #e8ffe2;\n}\n.footer .footer-top .content {\n  padding: 3rem 1.5rem;\n  text-align: center;\n  display: flex;\n  flex-flow: column;\n  justify-content: center;\n  align-items: center;\n}\n.footer .footer-top .content .informations {\n  display: flex;\n  flex-flow: column;\n  justify-content: center;\n  align-items: center;\n  margin: 12px;\n  opacity: 0.8;\n}\n.footer .footer-top .content .informations .title {\n  font-size: 20px;\n}\n.footer .footer-top .content .ladi-img {\n  width: 150px;\n}\n.footer .footer-top .content .ladi-img img {\n  width: 100%;\n  height: 100%;\n}\n@media (min-width: 768px) {\n  .footer .footer-top .content {\n    display: flex;\n    flex-flow: row;\n    justify-content: space-between;\n    text-align: start;\n  }\n  .footer .footer-top .content .informations {\n    align-items: unset;\n  }\n  .footer .footer-top .content .informations .title {\n    font-size: 25px;\n  }\n  .footer .footer-top .content .ladi-img {\n    width: 200px;\n  }\n}\n.footer .footer-bottom {\n  background-color: #8cd37a;\n  color: white;\n  padding: 15px 0px;\n}\n.footer .footer-bottom .content {\n  display: flex;\n  justify-content: space-between;\n}\n.footer .footer-bottom .content .media-social-wrapper {\n  display: flex;\n}\n.footer .footer-bottom .content .media-social-wrapper a {\n  width: 24px;\n  margin-left: 15px;\n}\n.footer .footer-bottom .content .media-social-wrapper a img {\n  width: 100%;\n  height: 100%;\n  background-color: white;\n  border-radius: 100%;\n}", ""]);
 
 // exports
 
@@ -66547,6 +66547,50 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/js/UI/images/Facebook.svg":
+/*!*********************************************!*\
+  !*** ./resources/js/UI/images/Facebook.svg ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/Facebook.svg?3705fd374f9af316a79476be4b53fdfe";
+
+/***/ }),
+
+/***/ "./resources/js/UI/images/Instagram.svg":
+/*!**********************************************!*\
+  !*** ./resources/js/UI/images/Instagram.svg ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/Instagram.svg?60de40ee0849b9e496b5bb9754750a13";
+
+/***/ }),
+
+/***/ "./resources/js/UI/images/Ladi.png":
+/*!*****************************************!*\
+  !*** ./resources/js/UI/images/Ladi.png ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/Ladi.png?8a3b7e03445a3c419ca4d68879227a3e";
+
+/***/ }),
+
+/***/ "./resources/js/UI/images/Youtube.svg":
+/*!********************************************!*\
+  !*** ./resources/js/UI/images/Youtube.svg ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/Youtube.svg?5697f90b17b0d1c97f05d69f28826ee4";
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -66713,7 +66757,7 @@ var Content = function Content() {
   });
   console.log(currCategory);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "content"
+    className: "content main-content"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container-option"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Pilih Kategori:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Selector__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -66740,15 +66784,72 @@ var Content = function Content() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _sass_components_Footer_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../sass/components/Footer.scss */ "./resources/sass/components/Footer.scss");
-/* harmony import */ var _sass_components_Footer_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_sass_components_Footer_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _UI_images_Ladi_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../UI/images/Ladi.png */ "./resources/js/UI/images/Ladi.png");
+/* harmony import */ var _UI_images_Ladi_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_UI_images_Ladi_png__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _UI_images_Facebook_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../UI/images/Facebook.svg */ "./resources/js/UI/images/Facebook.svg");
+/* harmony import */ var _UI_images_Facebook_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_UI_images_Facebook_svg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _UI_images_Instagram_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../UI/images/Instagram.svg */ "./resources/js/UI/images/Instagram.svg");
+/* harmony import */ var _UI_images_Instagram_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_UI_images_Instagram_svg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _UI_images_Youtube_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../UI/images/Youtube.svg */ "./resources/js/UI/images/Youtube.svg");
+/* harmony import */ var _UI_images_Youtube_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_UI_images_Youtube_svg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _sass_components_Footer_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../sass/components/Footer.scss */ "./resources/sass/components/Footer.scss");
+/* harmony import */ var _sass_components_Footer_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_sass_components_Footer_scss__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
 
 
 
 var Footer = function Footer() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "footer"
-  }, "this is footer");
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer-top"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "informations"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title"
+  }, "Support Our Masjid"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "address"
+  }, "indonesischer Weisheits- & Kulturzentrum e.V. ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Feldzeugmeister. 1", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "10557 Berlin"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bank-account"
+  }, "Phone : +49 30 6792 7147", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Fax. : +49 30 6792 7147", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Email : info@iwkz.de", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Konto Nr. : 346669106", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "BLZ : 1001 0010, Post Bank Berlin")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ladi-img"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _UI_images_Ladi_png__WEBPACK_IMPORTED_MODULE_1___default.a
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer-bottom"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "copyright"
+  }, "\xA9 2020 IWKZ."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "media-social-wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.facebook.com/IWKZ.Berlin",
+    className: "footer-facebook",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _UI_images_Facebook_svg__WEBPACK_IMPORTED_MODULE_2___default.a
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.instagram.com/iwkzalfalah/",
+    className: "footer-instagram",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _UI_images_Instagram_svg__WEBPACK_IMPORTED_MODULE_3___default.a
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.youtube.com/user/alfalahberlin",
+    className: "footer-youtube",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _UI_images_Youtube_svg__WEBPACK_IMPORTED_MODULE_4___default.a
+  }))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
