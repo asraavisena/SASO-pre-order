@@ -1,15 +1,14 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import Content from './Content';
 
 import '../../sass/components/Layout.scss';
 
-const Layout = () => {
+const Layout = ({children}) => {
     return (
         <div className="layout">
             <Header />
-            <Content/>
+            {children}
             <Footer/>
         </div>
     );

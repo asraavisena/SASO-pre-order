@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Menu;
 use App\Models\Event;
 use App\Models\Category;
 
@@ -27,8 +26,13 @@ class HomeController extends Controller
     public function index()
     {
         $events = Event::all();
-        $menus = Menu::all();
         $categories = Category::all();
-        return view('react-welcome', ['events' => $events, 'menus' => $menus, 'categories' => $categories]);
+        //'mungkin' untuk sementara
+        foreach ($categories as $category) {
+            foreach ($category->menus as $menu) {
+                $category['menus'] = $menu;
+            }
+        }
+        return view('react-welcome', ['events' => $events, 'categories' => $categories]);
     }
 }

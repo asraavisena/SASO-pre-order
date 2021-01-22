@@ -1,20 +1,16 @@
 .menu {
-    display: flex;
-    flex: 0 0 50%;
-    padding: 5px 5px;
+    margin-bottom: 20px;
     .menu-wrapper {
         display: flex;
         flex-flow: column;
         align-items: center;
-        padding: 5px 5px;
         box-shadow: 0 1.30263px 5.21053px rgba(0, 0, 0, 0.1);
         border: 1.30263px solid #DEE2EE;
         border-radius: 5.21053px;
         background-color: white;
-        width: 100%;
         .image-wrapper {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             display: flex;
             align-items: center;
             .image {
@@ -47,11 +43,5 @@
         :last-child {
             margin-right: 0;
         }
-    }
-    @media all and (min-width: 480px) {
-        flex: 0 0 33.3333%;
-    }
-    @media all and (min-width: 768px) {
-        flex: 0 0 25%;
     }
 }

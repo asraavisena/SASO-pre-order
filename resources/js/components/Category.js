@@ -1,32 +1,20 @@
 import React from 'react';
-import Menu from './Menu';
+import Menus from './Menus'
 
 import '../../sass/components/Category.scss'
 
 const Category = (props) => {
     const {
         category,
-        menus
     } = props;
-    const menu = menus.map((menu, i) =>
-        (menu.category_id == category.id) ?
-            <Menu
-                key={menu.id}
-                menu={menu}
-            />
-            :
-            null
-    );
+
     return (
         <div className="category">
             <div className="category-wrapper">
                 <div className="category-name">
                    {category.name}
                 </div>
-                <div className="sliders">
-                    {/** add arrows */}
-                    {menu}
-                </div>
+                <Menus category={category}/>
             </div>
         </div>
     );

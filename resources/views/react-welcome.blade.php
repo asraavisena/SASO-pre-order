@@ -23,7 +23,6 @@
     </head>
     <body class="antialiased">
     <script>
-        window.menus= <?= json_encode($menus) ?>;
         window.events= <?= json_encode($events) ?>;
         window.categories= <?= json_encode($categories) ?>;
     </script>
