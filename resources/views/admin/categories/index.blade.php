@@ -52,7 +52,7 @@
                             @foreach($categories as $category)
                                 <tr>
                                     <td>{{$category->id}}</td>
-                                    <td>{{$category->name}}</td>
+                                    <td><a href="{{route('categories.show', $category->id)}}" role="button">{{$category->name}}</a></td>
                                     <td>{{$category->slug}}</td>
                                     <td>{{$category->created_at->diffForHumans()}}</td>
                                     <td>{{$category->updated_at->diffForHumans()}}</td>

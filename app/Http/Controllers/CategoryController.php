@@ -15,6 +15,12 @@ class CategoryController extends Controller
         return view('admin.categories.index', ['categories' => $categories]);
     }
 
+    public function show(Category $category){
+        return view('admin.categories.show', [
+            'category' => $category
+            ]);
+    }
+
     public function store(){
         request()->validate([
             'name' => 'required'

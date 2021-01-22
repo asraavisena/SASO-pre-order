@@ -49,7 +49,7 @@
                             <td><img width="100px" src="{{$menu->menu_image}}" alt=""></td>
                             <td>{{$menu->quantity}}</td>
                             <td>{{$menu->price}}</td>
-                            <td>{{$menu->category ? $menu->category->name : 'Uncategorized'}}</td>
+                            <td><a href="{{route('categories.show', $menu->category_id)}}" role="button">{{$menu->category ? $menu->category->name : 'Uncategorized'}}</a></td>
                             <td>{{$menu->created_at->diffForHumans()}}</td>
                             <td>{{$menu->updated_at->diffForHumans()}}</td>
                         </tr>
