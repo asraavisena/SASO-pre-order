@@ -6358,7 +6358,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".content {\n  padding-top: 50px;\n  margin: 0 20px;\n}\n.content .container-option {\n  display: flex;\n  flex-direction: column;\n  margin: 20px 0;\n  align-items: center;\n  justify-content: center;\n}\n.content .container-option label {\n  white-space: nowrap;\n  margin-right: 10px;\n  font-weight: bold;\n  font-size: 15px;\n}", ""]);
+exports.push([module.i, ".content {\n  padding-top: 50px;\n  max-width: 1185px;\n  margin-right: auto;\n  margin-left: auto;\n}\n@media (max-width: 1200px) {\n  .content {\n    max-width: calc(100% - 140px);\n  }\n}\n@media (max-width: 1024px) {\n  .content {\n    max-width: calc(100% - 112px);\n  }\n}\n@media (max-width: 767px) {\n  .content {\n    max-width: calc(100% - 40px);\n  }\n}\n.content .container-option {\n  display: flex;\n  flex-direction: column;\n  margin: 20px 0;\n  align-items: center;\n  justify-content: center;\n}\n.content .container-option label {\n  white-space: nowrap;\n  margin-right: 10px;\n  font-weight: bold;\n  font-size: 15px;\n}", ""]);
 
 // exports
 
