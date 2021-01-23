@@ -58,7 +58,7 @@
       <!-- Nav Item - Pages Collapse Menu -->
       <x-admin.sidenav.admin-sidenav-eventlink></x-admin.sidenav.admin-sidenav-eventlink>
       <x-admin.sidenav.admin-sidenav-menulink></x-admin.sidenav.admin-sidenav-menulink>
-      <x-admin.sidenav.admin-sidenav-categorylink></x-admin.sidenav.admin-sidenav-categorylink>
+      
 
       <!-- Divider -->
       <hr class="sidebar-divider">

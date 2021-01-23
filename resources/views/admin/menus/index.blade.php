@@ -7,7 +7,12 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                <div class="float-left d-inline">
+                    <h4 class=" h4 m-0 font-weight-bold text-primary">MENU TABLES</h4>
+                </div>
+                <div class="m-0 float-right">
+                    <a class="btn btn-primary btn-sm" href="{{ route('categories.index') }}" role="button">Show Category</a>
+                </div>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -40,11 +45,11 @@
                     @foreach($menus as $menu)
                         <tr>
                             <td>{{$menu->id}}</td>
-                            <td>{{$menu->name}}</td>
+                            <td><a href="{{route('menus.show', $menu->id)}}">{{$menu->name}}</td>
                             <td><img width="100px" src="{{$menu->menu_image}}" alt=""></td>
                             <td>{{$menu->quantity}}</td>
                             <td>{{$menu->price}}</td>
-                            <td>{{$menu->category ? $menu->category->name : 'Uncategorized'}}</td>
+                            <td><a href="{{route('categories.show', $menu->category_id)}}" role="button">{{$menu->category ? $menu->category->name : 'Uncategorized'}}</a></td>
                             <td>{{$menu->created_at->diffForHumans()}}</td>
                             <td>{{$menu->updated_at->diffForHumans()}}</td>
                         </tr>
