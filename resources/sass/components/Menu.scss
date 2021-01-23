@@ -8,14 +8,19 @@
         border: 1.30263px solid #DEE2EE;
         border-radius: 5.21053px;
         background-color: white;
+        padding: 5px 3px;
         .image-wrapper {
             width: 100px;
             height: 100px;
             display: flex;
             align-items: center;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 3px;
             .image {
-                max-width: 100%;
-                max-width: 100%;
+                width: 125%;
                 margin: auto;
             }
         }
@@ -31,10 +36,12 @@
             -webkit-line-clamp: 2;
             margin-bottom: 3px;
             overflow: hidden;
+            margin-bottom: 3px;
         }
         .menu-price{
             font-size: 15px;
             font-weight: bold;
+            margin-bottom: 3px;
         }
         .menu-quantity{
             opacity: 0.5;
