@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Category from './Category';
 import Selector from './Selector';
-
+import WhatsAppWidget from './WhatsAppWidget'
 import '../../sass/components/Content.scss';
 
 
@@ -50,6 +50,8 @@ const Content = () => {
                 />
             </div>
             {category}
+            {/** add select wa widget button */}
+            <WhatsAppWidget phoneNumber=""/>
             {/** add order or payment info*/}
         </div>
     );

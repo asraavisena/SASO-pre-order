@@ -6498,6 +6498,25 @@ exports.push([module.i, ".selector {\n  border: 1px solid #ff8800;\n  padding: 5
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/sass/components/WhatsAppWidget.scss":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/sass/components/WhatsAppWidget.scss ***!
+  \******************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".whatsapp-widget {\n  z-index: 9999;\n  position: fixed;\n  bottom: 40px;\n  left: 30px;\n  width: 70px;\n  height: 70px;\n}\n.whatsapp-widget .whatsapp-logo {\n  width: 100%;\n  height: 100%;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/lib/css-base.js":
 /*!*************************************************!*\
   !*** ./node_modules/css-loader/lib/css-base.js ***!
@@ -66580,6 +66599,17 @@ module.exports = "/images/Ladi.png?8a3b7e03445a3c419ca4d68879227a3e";
 
 /***/ }),
 
+/***/ "./resources/js/UI/images/WhatsApp.svg":
+/*!*********************************************!*\
+  !*** ./resources/js/UI/images/WhatsApp.svg ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/WhatsApp.svg?0e878a0fa68c61b06e781cee2e6bc71f";
+
+/***/ }),
+
 /***/ "./resources/js/UI/images/Youtube.svg":
 /*!********************************************!*\
   !*** ./resources/js/UI/images/Youtube.svg ***!
@@ -66708,8 +66738,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Category__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Category */ "./resources/js/components/Category.js");
 /* harmony import */ var _Selector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Selector */ "./resources/js/components/Selector.js");
-/* harmony import */ var _sass_components_Content_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../sass/components/Content.scss */ "./resources/sass/components/Content.scss");
-/* harmony import */ var _sass_components_Content_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_sass_components_Content_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _WhatsAppWidget__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./WhatsAppWidget */ "./resources/js/components/WhatsAppWidget.js");
+/* harmony import */ var _sass_components_Content_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../sass/components/Content.scss */ "./resources/sass/components/Content.scss");
+/* harmony import */ var _sass_components_Content_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_sass_components_Content_scss__WEBPACK_IMPORTED_MODULE_4__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -66721,6 +66752,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -66766,7 +66798,9 @@ var Content = function Content() {
       return setCurrCategory(event.target.value);
     },
     categories: categories
-  })), category);
+  })), category, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WhatsAppWidget__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    phoneNumber: ""
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Content);
@@ -67073,6 +67107,43 @@ var Selector = function Selector(props) {
 
 /***/ }),
 
+/***/ "./resources/js/components/WhatsAppWidget.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/WhatsAppWidget.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _UI_images_WhatsApp_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../UI/images/WhatsApp.svg */ "./resources/js/UI/images/WhatsApp.svg");
+/* harmony import */ var _UI_images_WhatsApp_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_UI_images_WhatsApp_svg__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _sass_components_WhatsAppWidget_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../sass/components/WhatsAppWidget.scss */ "./resources/sass/components/WhatsAppWidget.scss");
+/* harmony import */ var _sass_components_WhatsAppWidget_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_sass_components_WhatsAppWidget_scss__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var WhatsAppWidget = function WhatsAppWidget(props) {
+  var phoneNumber = props.phoneNumber;
+  phoneNumber = phoneNumber === "" ? "4915223122739" : phoneNumber;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ['https://wa.me/', phoneNumber].join(''),
+    className: "whatsapp-widget",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _UI_images_WhatsApp_svg__WEBPACK_IMPORTED_MODULE_1___default.a,
+    className: "whatsapp-logo"
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (WhatsAppWidget);
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -67333,6 +67404,36 @@ if(false) {}
 
 
 var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./Selector.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/sass/components/Selector.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/sass/components/WhatsAppWidget.scss":
+/*!*******************************************************!*\
+  !*** ./resources/sass/components/WhatsAppWidget.scss ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./WhatsAppWidget.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/sass/components/WhatsAppWidget.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
