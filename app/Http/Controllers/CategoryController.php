@@ -33,6 +33,12 @@ class CategoryController extends Controller
         return back();
     }
 
+    public function destroy(Category $category, Request $request) {
+        $category->delete();
+        $request->session()->flash('category-destroy-message', 'Category deleted: ' . $category->name);
+        return redirect()->route('categories.index');
+    }
+
     //**  Another form for store but it does not have automatically added slug yet **//
     // public function store(Request $request) {
 

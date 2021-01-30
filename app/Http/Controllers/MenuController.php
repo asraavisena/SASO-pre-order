@@ -99,14 +99,13 @@ class MenuController extends Controller
 
         $menu->save();
 
-        session()->flash('menu-updated-message', 'Post updated: '. $menu->name );
+        session()->flash('menu-updated-message', 'Menu updated: '. $menu->name );
         return redirect()->route('menus.index');
     }
 
     public function destroy(Menu $menu, Request $request) {
         $menu->delete();
-        $request->session()->flash('menu-destroy-message', 'Post deleted: ' . $menu->name);
-        // Session::flash('message', 'Post was deleted');
+        $request->session()->flash('menu-destroy-message', 'Menu deleted: ' . $menu->name);
         return redirect()->route('menus.index');
     }
 }

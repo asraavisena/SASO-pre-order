@@ -3,6 +3,10 @@
         <h1 class="h3 mb-4 text-gray-800">Menus</h1>
         @if(session('menu-created-message'))
           <div class="alert alert-success">{{session('menu-created-message')}}</div>
+        @elseif(session('menu-updated-message'))
+            <div class="alert alert-success">{{session('menu-updated-message')}}</div>
+        @elseif(session('menu-destroy-message'))
+            <div class="alert alert-danger">{{session('menu-destroy-message')}}</div>
         @endif
 
         <div class="card shadow mb-4">

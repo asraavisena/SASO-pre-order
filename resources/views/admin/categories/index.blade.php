@@ -3,6 +3,8 @@
         <h1 class="h3 mb-4 text-gray-800">Categories</h1>
         @if(session('category-created-message'))
           <div class="alert alert-success">{{session('category-created-message')}}</div>
+        @elseif(session('category-destroy-message'))
+            <div class="alert alert-danger">{{session('category-destroy-message')}}</div>
         @endif
 
         <div class="row">
@@ -37,6 +39,7 @@
                                 <th>Slug</th>
                                 <th>Created At</th>
                                 <th>Updated At</th>
+                                <th>Delete</th>
                             </tr>
                             </thead>
                             <tfoot>
@@ -46,6 +49,7 @@
                                 <th>Slug</th>
                                 <th>Created At</th>
                                 <th>Updated At</th>
+                                <th>Delete</th>
                             </tr>
                             </tfoot>
                             <tbody>
@@ -56,6 +60,13 @@
                                     <td>{{$category->slug}}</td>
                                     <td>{{$category->created_at->diffForHumans()}}</td>
                                     <td>{{$category->updated_at->diffForHumans()}}</td>
+                                    <td>
+                                        <form method="POST" action="{{route('categories.destroy', $category->id)}}" enctype="multipart/form-data">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-danger">Delete</button>
+                                        </form>
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>

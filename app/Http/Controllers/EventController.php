@@ -73,13 +73,13 @@ class EventController extends Controller
 
         $event->save();
 
-        session()->flash('event-updated-message', 'Post updated: '. $event->name );
+        session()->flash('event-updated-message', 'Event updated: '. $event->name );
         return redirect()->route('events.index');
     }
 
     public function destroy(Event $event, Request $request) {
         $event->delete();
-        $request->session()->flash('event-destroy-message', 'Post deleted: ' . $event->name);
+        $request->session()->flash('event-destroy-message', 'Event deleted: ' . $event->name);
         // Session::flash('message', 'Post was deleted');
         return redirect()->route('events.index');
     }
