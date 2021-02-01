@@ -6567,7 +6567,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".menus {\n  display: flex;\n  flex-wrap: wrap;\n}", ""]);
+exports.push([module.i, ".menus {\n  display: flex;\n  flex-wrap: wrap;\n}\n.menus span {\n  text-align: center;\n  font-style: italic;\n  width: 100%;\n}", ""]);
 
 // exports
 
@@ -70666,14 +70666,16 @@ __webpack_require__.r(__webpack_exports__);
 var Menus = function Menus(props) {
   var category = props.category;
   var menu = category.menus.map(function (menu, i) {
-    return menu.category_id == category.id ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Menu__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Menu__WEBPACK_IMPORTED_MODULE_1__["default"], {
       key: menu.id,
       menu: menu
-    }) : null;
+    });
   });
+  var noMenuMessage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Maaf, menu tidak tersedia.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Silahkan hubungi Contact Person (CP) yang tersedia untuk informasi lebih lanjut.");
+  var noMenusExist = category.menus.length == 0;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "menus"
-  }, menu);
+  }, noMenusExist ? noMenuMessage : menu);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Menus);

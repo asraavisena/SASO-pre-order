@@ -7,18 +7,27 @@ const Menus = (props) => {
     const {
         category,
     } = props;
+
     const menu = category.menus.map((menu, i) =>
-        (menu.category_id == category.id) ?
             <Menu
                 key={menu.id}
                 menu={menu}
             />
-            :
-            null
     );
+    const noMenuMessage = (
+        <span>
+            Maaf, menu tidak tersedia. 
+            <br />
+            Silahkan hubungi Contact Person (CP) 
+            yang tersedia untuk informasi lebih lanjut.
+        </span>    
+    )
+    const noMenusExist = category.menus.length == 0;
     return (
         <div className="menus">
-            {menu}
+            {
+                noMenusExist ? noMenuMessage : menu
+            }
         </div>
     );
 };
