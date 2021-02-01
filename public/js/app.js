@@ -6548,7 +6548,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".menu {\n  margin-bottom: 20px;\n}\n.menu .menu-wrapper {\n  display: flex;\n  flex-flow: column;\n  align-items: center;\n  box-shadow: 0 1.30263px 5.21053px rgba(0, 0, 0, 0.1);\n  border: 1.30263px solid #DEE2EE;\n  border-radius: 5.21053px;\n  background-color: white;\n  padding: 5px 3px;\n}\n.menu .menu-wrapper .image-wrapper {\n  max-width: 100px;\n  height: 100px;\n  display: flex;\n  align-items: center;\n  overflow: hidden;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-bottom: 3px;\n}\n.menu .menu-wrapper .image-wrapper .image {\n  width: 125%;\n  margin: auto;\n}\n.menu .menu-wrapper .menu-name {\n  text-align: center;\n  font-weight: bold;\n  font-size: 13px;\n  line-height: 15px;\n  color: #404040;\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  min-height: 30px;\n  -webkit-line-clamp: 2;\n  margin-bottom: 3px;\n  overflow: hidden;\n  margin-bottom: 3px;\n}\n.menu .menu-wrapper .menu-price {\n  font-size: 15px;\n  font-weight: bold;\n  margin-bottom: 3px;\n}\n.menu .menu-wrapper .menu-quantity {\n  opacity: 0.5;\n  font-size: 12px;\n}\n.menu .menu-wrapper :last-child {\n  margin-right: 0;\n}", ""]);
+exports.push([module.i, ".menu {\n  margin-bottom: 20px;\n}\n.menu .menu-wrapper {\n  display: flex;\n  flex-flow: column;\n  align-items: center;\n  box-shadow: 0 1.30263px 5.21053px rgba(0, 0, 0, 0.1);\n  border: 1.30263px solid #DEE2EE;\n  border-radius: 5.21053px;\n  background-color: white;\n  padding: 5px 3px;\n}\n.menu .menu-wrapper.highlighted {\n  border: 1.30263px solid #ff0000;\n}\n.menu .menu-wrapper.highlighted .menu-quantity {\n  color: #ff0000;\n  font-weight: 700;\n}\n.menu .menu-wrapper.disabled {\n  opacity: 0.5;\n}\n.menu .menu-wrapper .image-wrapper {\n  max-width: 100px;\n  height: 100px;\n  display: flex;\n  align-items: center;\n  overflow: hidden;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-bottom: 3px;\n}\n.menu .menu-wrapper .image-wrapper .image {\n  width: 125%;\n  margin: auto;\n}\n.menu .menu-wrapper .menu-name {\n  text-align: center;\n  font-weight: bold;\n  font-size: 13px;\n  line-height: 15px;\n  color: #404040;\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  min-height: 30px;\n  -webkit-line-clamp: 2;\n  margin-bottom: 3px;\n  overflow: hidden;\n  margin-bottom: 3px;\n}\n.menu .menu-wrapper .menu-price {\n  font-size: 15px;\n  font-weight: bold;\n  margin-bottom: 3px;\n}\n.menu .menu-wrapper .menu-quantity {\n  opacity: 0.6;\n  font-size: 12px;\n}\n.menu .menu-wrapper :last-child {\n  margin-right: 0;\n}", ""]);
 
 // exports
 
@@ -70616,11 +70616,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Menu = function Menu(props) {
-  var menu = props.menu;
+  var menu = props.menu; //stock almost sold out
+
+  var almostSoldOut = menu.quantity < 10 && menu.quantity > 0;
+  var highlighted = almostSoldOut ? " highlighted" : ""; //stock already sold out
+
+  var soldOut = menu.quantity == 0;
+  var disabled = soldOut ? " disabled" : "";
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "menu col-6 col-sm-4 col-lg-2"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "menu-wrapper"
+    className: ["menu-wrapper", highlighted, disabled].join('')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "image-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {

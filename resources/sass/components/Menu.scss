@@ -9,6 +9,16 @@
         border-radius: 5.21053px;
         background-color: white;
         padding: 5px 3px;
+        &.highlighted{
+            border: 1.30263px solid #ff0000;
+            .menu-quantity {
+                color: #ff0000;
+                font-weight: 700;
+            }
+        }
+        &.disabled{
+            opacity: 0.5;
+        }
         .image-wrapper {
             max-width: 100px;
             height: 100px;
@@ -44,7 +54,7 @@
             margin-bottom: 3px;
         }
         .menu-quantity{
-            opacity: 0.5;
+            opacity: 0.6;
             font-size: 12px;
         }
         :last-child {
