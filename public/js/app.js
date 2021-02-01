@@ -6339,7 +6339,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".cart-icon {\n  max-width: 28px;\n  height: 28px;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.cart-icon img {\n  width: 100%;\n  height: 100%;\n}\n.cart-icon .item-count {\n  position: absolute;\n  /* left: 40%; */\n  top: 10px;\n  text-align: center;\n  font-size: 11px;\n}", ""]);
+exports.push([module.i, ".cart-icon {\n  max-width: 28px;\n  height: 28px;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  cursor: pointer;\n}\n.cart-icon img {\n  width: 100%;\n  height: 100%;\n}\n.cart-icon .item-count {\n  position: absolute;\n  /* left: 40%; */\n  top: 10px;\n  text-align: center;\n  font-size: 11px;\n}", ""]);
 
 // exports
 
@@ -6415,7 +6415,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".header {\n  position: fixed;\n  width: 100%;\n  border-top: 2px solid #ff8800;\n  background-color: white;\n  box-shadow: rgba(68, 68, 68, 0.494) 0px 1px 10px;\n  font-size: 12px;\n  z-index: 9999;\n}\n.header .header-wrapper {\n  padding: 11px 12px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.header .header-wrapper .img-holder {\n  width: 28px;\n}", ""]);
+exports.push([module.i, ".header {\n  position: fixed;\n  width: 100%;\n  border-top: 2px solid #ff8800;\n  background-color: white;\n  box-shadow: rgba(68, 68, 68, 0.494) 0px 1px 10px;\n  font-size: 12px;\n  z-index: 9999;\n}\n.header .header-wrapper {\n  padding: 11px 12px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  max-width: 1185px;\n  margin-right: auto;\n  margin-left: auto;\n}\n@media (max-width: 1200px) {\n  .header .header-wrapper {\n    max-width: calc(100% - 140px);\n  }\n}\n@media (max-width: 1024px) {\n  .header .header-wrapper {\n    max-width: calc(100% - 112px);\n  }\n}\n@media (max-width: 767px) {\n  .header .header-wrapper {\n    max-width: calc(100% - 40px);\n  }\n}\n.header .header-wrapper .img-holder {\n  width: 28px;\n}", ""]);
 
 // exports
 
