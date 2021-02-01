@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import Category from './Category';
 import Selector from './Selector';
-import WhatsAppWidget from './WhatsAppWidget'
+import CartContent from './CartContent';
+import WhatsAppWidget from './WhatsAppWidget';
+import { connect } from 'react-redux';
+
 import '../../sass/components/Content.scss';
 
-
-const Content = () => {
+const Content = ({hidden}) => {
     const {
         categories
     } = window;
     const [currCategory, setCurrCategory] = useState('');
 
-    console.log(categories);
     //load category depends on selected category
     const category = categories.map((cgr) => {
         if (currCategory === "all" || currCategory==="") {
@@ -33,28 +34,42 @@ const Content = () => {
         }
         return null;
     });
-    console.log(currCategory);
-    return (
-        <div className="content main-content">
-            {/** add hero banner */}
-            {/** add info page */}
-            {/** add select category button */}
+
+    //categories section
+    const categoriesWrapper = (
+        <div className="categories-wrapper">
             <div className="container-option">
                 <label>
                     Pilih Kategori:
                 </label>
                 <Selector
                     label="category"
+                    currCategory = {currCategory}
                     onChange={(event) => setCurrCategory(event.target.value)}
                     categories={categories}
                 />
             </div>
             {category}
-            {/** add select wa widget button */}
+        </div>
+    );
+    
+    return (
+        <div className="content main-content">
+            {/** add hero banner */}
+            {/** add info page */}
+            {
+                /* show categories section or cartContent */
+                hidden ? categoriesWrapper : <CartContent/>
+            }
+            {/** WA widgetfor to contact CP */}
             <WhatsAppWidget phoneNumber=""/>
-            {/** add order or payment info*/}
         </div>
     );
 };
 
-export default Content;
+{/* hidden = cartHidden */}
+const mapStateToProps = ({ cart:{ hidden } }) => ({
+    hidden
+})
+
+export default connect(mapStateToProps)(Content);
