@@ -6472,7 +6472,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".menu {\n  margin-bottom: 20px;\n}\n.menu .menu-wrapper {\n  display: flex;\n  flex-flow: column;\n  align-items: center;\n  box-shadow: 0 1.30263px 5.21053px rgba(0, 0, 0, 0.1);\n  border: 1.30263px solid #DEE2EE;\n  border-radius: 5.21053px;\n  background-color: white;\n  padding: 5px 3px;\n}\n.menu .menu-wrapper .image-wrapper {\n  width: 100px;\n  height: 100px;\n  display: flex;\n  align-items: center;\n  overflow: hidden;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-bottom: 3px;\n}\n.menu .menu-wrapper .image-wrapper .image {\n  width: 125%;\n  margin: auto;\n}\n.menu .menu-wrapper .menu-name {\n  text-align: center;\n  font-weight: bold;\n  font-size: 13px;\n  line-height: 15px;\n  color: #404040;\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  min-height: 30px;\n  -webkit-line-clamp: 2;\n  margin-bottom: 3px;\n  overflow: hidden;\n  margin-bottom: 3px;\n}\n.menu .menu-wrapper .menu-price {\n  font-size: 15px;\n  font-weight: bold;\n  margin-bottom: 3px;\n}\n.menu .menu-wrapper .menu-quantity {\n  opacity: 0.5;\n  font-size: 12px;\n}\n.menu .menu-wrapper :last-child {\n  margin-right: 0;\n}", ""]);
+exports.push([module.i, ".menu {\n  margin-bottom: 20px;\n}\n.menu .menu-wrapper {\n  display: flex;\n  flex-flow: column;\n  align-items: center;\n  box-shadow: 0 1.30263px 5.21053px rgba(0, 0, 0, 0.1);\n  border: 1.30263px solid #DEE2EE;\n  border-radius: 5.21053px;\n  background-color: white;\n  padding: 5px 3px;\n}\n.menu .menu-wrapper .image-wrapper {\n  max-width: 100px;\n  height: 100px;\n  display: flex;\n  align-items: center;\n  overflow: hidden;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-bottom: 3px;\n}\n.menu .menu-wrapper .image-wrapper .image {\n  width: 125%;\n  margin: auto;\n}\n.menu .menu-wrapper .menu-name {\n  text-align: center;\n  font-weight: bold;\n  font-size: 13px;\n  line-height: 15px;\n  color: #404040;\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  min-height: 30px;\n  -webkit-line-clamp: 2;\n  margin-bottom: 3px;\n  overflow: hidden;\n  margin-bottom: 3px;\n}\n.menu .menu-wrapper .menu-price {\n  font-size: 15px;\n  font-weight: bold;\n  margin-bottom: 3px;\n}\n.menu .menu-wrapper .menu-quantity {\n  opacity: 0.5;\n  font-size: 12px;\n}\n.menu .menu-wrapper :last-child {\n  margin-right: 0;\n}", ""]);
 
 // exports
 
@@ -6510,7 +6510,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".selector {\n  border: 1px solid #ff8800;\n  padding: 5px 0;\n  border-radius: 5.21053px;\n  background-color: white;\n  width: 100%;\n  cursor: pointer;\n}", ""]);
+exports.push([module.i, ".selector {\n  border: 1px solid #ff8800;\n  padding: 5px 0;\n  border-radius: 5.21053px;\n  background-color: white;\n  width: 100%;\n  max-width: 277px;\n  cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -6529,7 +6529,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".whatsapp-widget {\n  z-index: 9999;\n  position: fixed;\n  bottom: 40px;\n  left: 30px;\n  width: 70px;\n  height: 70px;\n}\n.whatsapp-widget .whatsapp-logo {\n  width: 100%;\n  height: 100%;\n}", ""]);
+exports.push([module.i, ".whatsapp-widget {\n  z-index: 9999;\n  position: fixed;\n  bottom: 40px;\n  width: 70px;\n  height: 70px;\n}\n.whatsapp-widget .whatsapp-logo {\n  width: 100%;\n  height: 100%;\n}", ""]);
 
 // exports
 
