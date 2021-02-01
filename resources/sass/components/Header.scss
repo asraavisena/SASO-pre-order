@@ -8,9 +8,11 @@
     z-index: 9999;
     .header-wrapper{
         padding: 11px 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         .img-holder {
-            max-width: 28px;
-            margin: auto;
+            width: 28px;
         }
     }
 }

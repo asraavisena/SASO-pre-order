@@ -1,4 +1,5 @@
 import React from 'react';
+import Cart from './Cart';
 
 import '../../sass/components/Header.scss';
 
@@ -15,7 +16,9 @@ const Header = () => {
                         <img src="https://iwkz.de/static/media/iwkz-navbar.80c680cd.svg"></img>
                     </a>
                 </div>
-                {/** add cart */}
+                {/** add saso logo */}
+                <div className="saso-logo">SASO 2021</div>
+                <Cart/>
             </div>
         </div>
     );

@@ -6327,6 +6327,25 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/sass/components/Cart.scss":
+/*!********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/sass/components/Cart.scss ***!
+  \********************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".cart-icon {\n  max-width: 28px;\n  height: 28px;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.cart-icon img {\n  width: 100%;\n  height: 100%;\n}\n.cart-icon .item-count {\n  position: absolute;\n  /* left: 40%; */\n  top: 10px;\n  text-align: center;\n  font-size: 11px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/sass/components/Category.scss":
 /*!************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/sass/components/Category.scss ***!
@@ -6396,7 +6415,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".header {\n  position: fixed;\n  width: 100%;\n  border-top: 2px solid #ff8800;\n  background-color: white;\n  box-shadow: rgba(68, 68, 68, 0.494) 0px 1px 10px;\n  font-size: 12px;\n  z-index: 9999;\n}\n.header .header-wrapper {\n  padding: 11px 12px;\n}\n.header .header-wrapper .img-holder {\n  max-width: 28px;\n  margin: auto;\n}", ""]);
+exports.push([module.i, ".header {\n  position: fixed;\n  width: 100%;\n  border-top: 2px solid #ff8800;\n  background-color: white;\n  box-shadow: rgba(68, 68, 68, 0.494) 0px 1px 10px;\n  font-size: 12px;\n  z-index: 9999;\n}\n.header .header-wrapper {\n  padding: 11px 12px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.header .header-wrapper .img-holder {\n  width: 28px;\n}", ""]);
 
 // exports
 
@@ -66621,6 +66640,17 @@ module.exports = "/images/Youtube.svg?5697f90b17b0d1c97f05d69f28826ee4";
 
 /***/ }),
 
+/***/ "./resources/js/UI/images/bag.svg":
+/*!****************************************!*\
+  !*** ./resources/js/UI/images/bag.svg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/bag.svg?433619f2b0db61bc2e0db716d621422a";
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -66687,6 +66717,39 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/Cart.js":
+/*!*****************************************!*\
+  !*** ./resources/js/components/Cart.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _UI_images_bag_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../UI/images/bag.svg */ "./resources/js/UI/images/bag.svg");
+/* harmony import */ var _UI_images_bag_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_UI_images_bag_svg__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _sass_components_Cart_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../sass/components/Cart.scss */ "./resources/sass/components/Cart.scss");
+/* harmony import */ var _sass_components_Cart_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_sass_components_Cart_scss__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var Cart = function Cart() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "cart-icon"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _UI_images_bag_svg__WEBPACK_IMPORTED_MODULE_1___default.a
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "item-count"
+  }, "0"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Cart);
 
 /***/ }),
 
@@ -66901,8 +66964,10 @@ var Footer = function Footer() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _sass_components_Header_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../sass/components/Header.scss */ "./resources/sass/components/Header.scss");
-/* harmony import */ var _sass_components_Header_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_sass_components_Header_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Cart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Cart */ "./resources/js/components/Cart.js");
+/* harmony import */ var _sass_components_Header_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../sass/components/Header.scss */ "./resources/sass/components/Header.scss");
+/* harmony import */ var _sass_components_Header_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_sass_components_Header_scss__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -66919,7 +66984,9 @@ var Header = function Header() {
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://iwkz.de/static/media/iwkz-navbar.80c680cd.svg"
-  })))));
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "saso-logo"
+  }, "SASO 2021"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cart__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -66977,6 +67044,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ //import { Provider } from 'react-redux';
 
 
 
@@ -67154,6 +67222,36 @@ var WhatsAppWidget = function WhatsAppWidget(props) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/components/Cart.scss":
+/*!*********************************************!*\
+  !*** ./resources/sass/components/Cart.scss ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./Cart.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/sass/components/Cart.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
