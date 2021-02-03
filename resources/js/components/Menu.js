@@ -11,7 +11,6 @@ const Menu = (props) => {
         menu,
         addItem
     } = props;
-    console.log(addItem);
     //stock almost sold out
     const almostSoldOut = (menu.quantity < 10) && (menu.quantity > 0);
     const highlighted = almostSoldOut ? " highlighted" : ""

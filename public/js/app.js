@@ -71046,8 +71046,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var Menu = function Menu(props) {
   var menu = props.menu,
-      addItem = props.addItem;
-  console.log(addItem); //stock almost sold out
+      addItem = props.addItem; //stock almost sold out
 
   var almostSoldOut = menu.quantity < 10 && menu.quantity > 0;
   var highlighted = almostSoldOut ? " highlighted" : ""; //stock already sold out
