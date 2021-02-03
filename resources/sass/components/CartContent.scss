@@ -1,2 +1,30 @@
 .cart-content{
+    text-align: center;
+    margin-bottom: 30px;
+    .cart-content-title{
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .cart-items{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    .empty-cart-message {
+            width: 100%;
+        }
+    }
+    .total-price-wrapper{
+        margin-bottom: 15px;
+        .total-price{
+            font-size: 20px;
+            span{
+                font-weight: bold;
+            }
+        }
+    }
+    .order-button{
+        width: 100%;
+        max-width: 200px;
+    }
 }

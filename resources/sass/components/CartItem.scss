@@ -1,0 +1,84 @@
+.cart-item{
+    margin-bottom: 20px;
+    position: relative;
+    .remove-button{
+        position: absolute;
+        top: 10px;
+        right: 30px;
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ff0000;
+        cursor: pointer;
+    }
+    .cart-item-wrapper{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        box-shadow: 0 1.30263px 5.21053px rgba(0, 0, 0, 0.1);
+        border: 1.30263px solid #DEE2EE;
+        border-radius: 5.21053px;
+        background-color: white;
+        padding: 5px 3px;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        .image-wrapper{
+            max-width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .image {
+                width: 125%;
+                margin: auto;
+            }
+        }
+        .cart-item-details{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .cart-item-name{
+                font-weight: bold;
+                color: #404040;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                min-height: 44px;
+                -webkit-line-clamp: 2;
+                margin-bottom: 3px;
+                overflow: hidden;
+                margin-bottom: 3px;
+            }
+            .cart-item-price {
+                margin-bottom: 15px;
+            }
+            .cart-item-info-wrapper{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 15px;
+                width: 120px;
+                .plus, .minus{
+                    width: 28px;
+                    height: 28px;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+                .plus{
+                    background-image: url('../../js/UI/images/plus.svg');
+                }
+                .minus {
+                    background-image: url('../../js/UI/images/minus.svg');
+                }
+            }
+        }
+    }
+}

@@ -57,6 +57,7 @@ const Content = ({hidden}) => {
         <div className="content main-content">
             {/** add hero banner */}
             {/** add info page */}
+            <hr/>
             {
                 /* show categories section or cartContent */
                 hidden ? categoriesWrapper : <CartContent/>

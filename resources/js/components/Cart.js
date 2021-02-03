@@ -1,15 +1,16 @@
 import React from 'react';
-import BagIcon from '../UI/images/bag.svg';
 import { connect } from 'react-redux';
 import { toggleCartHidden } from '../redux/cart/cart.action';
-
+import { selectCartItemsCount } from '../redux/cart/cart.selectors'
 import '../../sass/components/Cart.scss';
 
-const Cart = ({toggleCartHidden}) => {
+const Cart = ({toggleCartHidden, itemCount, hidden}) => {
     return (
-        <div className="cart-icon" onClick={toggleCartHidden}>
-            <img src={BagIcon}></img>
-            <span className="item-count">0</span>
+        <div
+            className={["cart-icon ", hidden ? '' : 'hidden'].join('')}
+            onClick={toggleCartHidden}
+        >
+            <span className="item-count">{itemCount}</span>
             {/** TODO: 
              * add order or payment info
              * better: if cart is empty, then the button is disabled
@@ -20,6 +21,11 @@ const Cart = ({toggleCartHidden}) => {
 
 const mapDispatchToProps = dispatch => ({
     toggleCartHidden: () => dispatch(toggleCartHidden())
-})
+});
 
-export default connect(null, mapDispatchToProps)(Cart);
+const mapStateToProps = (state) => ({
+    itemCount: selectCartItemsCount(state),
+    hidden: state.cart.hidden
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);
