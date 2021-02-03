@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../../sass/components/Menu.scss'
+import '../../sass/components/Menu.scss';
 
 const Menu = (props) => {
     const {
@@ -13,7 +13,7 @@ const Menu = (props) => {
     
     //stock already sold out
     const soldOut = (menu.quantity == 0);
-    const disabled = soldOut ? " disabled" : ""
+    const disabled = soldOut ? " disabled" : "";
     return (
         <div className="menu col-6 col-sm-4 col-lg-3">
             <div className={["menu-wrapper", highlighted, disabled].join('')}>

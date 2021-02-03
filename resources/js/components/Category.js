@@ -1,7 +1,7 @@
 import React from 'react';
 import Menus from './Menus'
 
-import '../../sass/components/Category.scss'
+import '../../sass/components/Category.scss';
 
 const Category = (props) => {
     const {
