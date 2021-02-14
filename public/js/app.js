@@ -6538,6 +6538,25 @@ exports.push([module.i, ".header {\n  position: fixed;\n  width: 100%;\n  border
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/sass/components/InfoPage.scss":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/sass/components/InfoPage.scss ***!
+  \************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".info-page {\n  display: flex;\n  flex-wrap: wrap;\n  margin: 30pt auto 170pt;\n}\n.info-page .img {\n  position: relative;\n  margin-top: 10pt;\n  flex-basis: 500px;\n  width: 55%;\n  border-radius: 50%;\n}\n.info-page .info {\n  padding: 100pt 50pt 0 50pt;\n  flex-basis: 500px;\n  text-align: left;\n  color: #4E342E;\n  font-family: \"Mirza\", cursive;\n}\n.info-page .info .title {\n  font-size: 6rem;\n  font-weight: bold;\n}\n.info-page .info .desc {\n  max-width: 500px;\n}\n.info-page .info .expand {\n  opacity: 50%;\n  text-align: right;\n}\n.info-page .order {\n  margin-top: 50pt;\n  flex-basis: 1200px;\n  text-align: center;\n}\n.info-page .order .order-link {\n  border-width: 3px;\n  border-color: #FF8F00;\n}\n@media (max-width: 1200px) {\n  .info-page {\n    display: inline;\n  }\n  .info-page .img {\n    margin: 5% auto 0;\n    display: block;\n    width: 50%;\n  }\n  .info-page .info {\n    padding: 0;\n  }\n  .info-page .info .title {\n    font-size: 5rem;\n  }\n  .info-page .order {\n    margin-top: 10pt;\n    margin-bottom: 170pt;\n  }\n}\n@media (max-width: 1000px) {\n  .info-page .img {\n    width: 55%;\n  }\n  .info-page .title {\n    font-size: 5rem;\n  }\n  .info-page .order {\n    margin-top: 10pt;\n  }\n}\n@media (max-width: 800px) {\n  .info-page .img {\n    width: 60%;\n  }\n  .info-page .title {\n    font-size: 5rem;\n  }\n  .info-page .order {\n    margin-top: 30pt;\n  }\n}\n@media (max-width: 500px) {\n  .info-page .img {\n    width: 100%;\n  }\n  .info-page .info .title {\n    font-size: 2.5rem;\n  }\n  .info-page .info .desc {\n    visibility: unset;\n  }\n  .info-page .order {\n    margin-top: 0;\n  }\n}\n\nhtml {\n  scroll-behavior: smooth;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/sass/components/Layout.scss":
 /*!**********************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/sass/components/Layout.scss ***!
@@ -70361,7 +70380,7 @@ module.exports = "/images/Ladi.png?8a3b7e03445a3c419ca4d68879227a3e";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/WhatsApp.svg?0e878a0fa68c61b06e781cee2e6bc71f";
+module.exports = "/images/WhatsApp.svg?7faace42bc00bf288224deafe03c7947";
 
 /***/ }),
 
@@ -70738,8 +70757,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CartContent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CartContent */ "./resources/js/components/CartContent.js");
 /* harmony import */ var _WhatsAppWidget__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./WhatsAppWidget */ "./resources/js/components/WhatsAppWidget.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _sass_components_Content_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../sass/components/Content.scss */ "./resources/sass/components/Content.scss");
-/* harmony import */ var _sass_components_Content_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_sass_components_Content_scss__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _InfoPage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./InfoPage */ "./resources/js/components/InfoPage.js");
+/* harmony import */ var _sass_components_Content_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../sass/components/Content.scss */ "./resources/sass/components/Content.scss");
+/* harmony import */ var _sass_components_Content_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_sass_components_Content_scss__WEBPACK_IMPORTED_MODULE_7__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -70751,6 +70771,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -70790,6 +70811,7 @@ var Content = function Content(_ref) {
   }); //categories section
 
   var categoriesWrapper = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "order",
     className: "categories-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container-option"
@@ -70803,7 +70825,7 @@ var Content = function Content(_ref) {
   })), category);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "content main-content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null),
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InfoPage__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null),
   /* show categories section or cartContent */
   hidden ? categoriesWrapper : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CartContent__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WhatsAppWidget__WEBPACK_IMPORTED_MODULE_4__["default"], {
     phoneNumber: ""
@@ -70945,6 +70967,77 @@ var Header = function Header() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
+
+/***/ }),
+
+/***/ "./resources/js/components/InfoPage.js":
+/*!*********************************************!*\
+  !*** ./resources/js/components/InfoPage.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _sass_components_InfoPage_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../sass/components/InfoPage.scss */ "./resources/sass/components/InfoPage.scss");
+/* harmony import */ var _sass_components_InfoPage_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_sass_components_InfoPage_scss__WEBPACK_IMPORTED_MODULE_1__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+var InfoPage = function InfoPage() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true),
+      _useState2 = _slicedToArray(_useState, 2),
+      isShrinked = _useState2[0],
+      setIsShrinked = _useState2[1];
+
+  var width = screen.width;
+  var desc = "SaSo (Sate Somay) adalah acara tahunan IWKZ yang dilakasanakan dalam rangka penggalangan dana untuk memenuhi kebutuhan operasional masjid";
+
+  function expand() {
+    setIsShrinked(false);
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "info-page"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "img",
+    src: "/storage/images/Bz8yZZ3jgNWtd1uE2uWk2z2t74hZW9ODLyWnhYVb.jpg"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "info"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "title"
+  }, "SaSo 2021"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "desc"
+  }, width < 400 && isShrinked ? desc.substring(0, 25) + "..." : desc), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "expand",
+    onClick: expand,
+    style: {
+      visibility: width < 400 && isShrinked ? 'visible' : 'collapse'
+    }
+  }, "selengkapnya")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "order"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#order"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn btn-warning order-link"
+  }, "Pesan Sekarang"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (InfoPage);
 
 /***/ }),
 
@@ -71693,6 +71786,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/sass/components/InfoPage.scss":
+/*!*************************************************!*\
+  !*** ./resources/sass/components/InfoPage.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./InfoPage.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/sass/components/InfoPage.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/sass/components/Layout.scss":
 /*!***********************************************!*\
   !*** ./resources/sass/components/Layout.scss ***!
@@ -71880,8 +72003,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Applications/mampstack-7.3.16-1/apache2/htdocs/SASO-pre-order/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Applications/mampstack-7.3.16-1/apache2/htdocs/SASO-pre-order/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\SASO-pre-order\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\SASO-pre-order\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

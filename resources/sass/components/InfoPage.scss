@@ -1,0 +1,104 @@
+.info-page {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30pt auto 170pt;
+    .img {
+        position: relative;
+        margin-top: 10pt;
+        flex-basis: 500px;
+        width: 55%;
+        border-radius: 50%;
+    }
+    .info {
+        padding: 100pt 50pt 0 50pt;
+        flex-basis: 500px;
+        text-align: left;
+        color: #4E342E;
+        font-family: 'Mirza', cursive;
+        .title {
+            font-size: 6rem;
+            font-weight: bold;
+        }
+        .desc {
+            max-width: 500px;
+        }
+        .expand {
+            opacity: 50%;
+            text-align: right;
+        }
+    }
+    
+    .order {
+        margin-top: 50pt;
+        flex-basis: 1200px;
+        text-align: center;
+        .order-link {
+            border-width: 3px;
+            border-color: #FF8F00;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        display: inline;
+        .img {
+            margin: 5% auto 0;
+            display: block;
+            width: 50%;
+        }
+        .info {
+            padding: 0;
+            .title {
+                font-size: 5rem;
+            }
+        }
+        .order {
+            margin-top: 10pt;
+            margin-bottom: 170pt;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        .img {
+            width: 55%;
+        }
+        .title {
+            font-size: 5rem;
+        }
+        .order {
+            margin-top: 10pt;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .img {
+            width: 60%;
+        }
+        .title {
+            font-size: 5rem;
+        }
+        .order {
+            margin-top: 30pt;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .img {
+            width: 100%;
+        }
+        .info {
+            .title {
+                font-size: 2.5rem;
+            }
+            .desc {
+                visibility: unset;
+            }
+        }
+        .order {
+            margin-top: 0;
+        }
+    }
+}
+html
+{
+        scroll-behavior: smooth;
+}
