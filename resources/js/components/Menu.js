@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
 import BuyButton from '../UI/Buttons/Button/Button';
@@ -11,13 +11,25 @@ const Menu = (props) => {
         menu,
         addItem
     } = props;
+
+    // quantity useState
+    const [quantity, setQuantity] = useState(menu.quantity);
+
     //stock almost sold out
-    const almostSoldOut = (menu.quantity < 10) && (menu.quantity > 0);
+    const almostSoldOut = (quantity < 10) && (quantity > 0);
     const highlighted = almostSoldOut ? " highlighted" : ""
     
     //stock already sold out
-    const soldOut = (menu.quantity == 0);
+    const soldOut = (quantity == 0);
     const disabled = soldOut ? " disabled" : "";
+
+    function decreaseQuantity() {
+        console.log(quantity);
+        setQuantity(prevValue => {
+            return prevValue - 1;
+        });
+    }
+
     return (
         <div className="menu col-12 col-sm-6 col-lg-3">
             <div className={["menu-wrapper", highlighted, disabled].join('')}>
@@ -35,10 +47,13 @@ const Menu = (props) => {
                     type="button"
                     text="Simpan di Keranjang"
                     disabled={soldOut}
-                    onClick = {()=>addItem(menu)}
+                    onClick = {()=>{
+                        addItem(menu);
+                        decreaseQuantity();
+                    }}
                 />
                 <div className="menu-quantity">
-                    Stock: {menu.quantity}
+                    Stock: {quantity}
                 </div>
             </div>
         </div>

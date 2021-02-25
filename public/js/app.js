@@ -70361,7 +70361,7 @@ module.exports = "/images/Ladi.png?8a3b7e03445a3c419ca4d68879227a3e";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/WhatsApp.svg?0e878a0fa68c61b06e781cee2e6bc71f";
+module.exports = "/images/WhatsApp.svg?7faace42bc00bf288224deafe03c7947";
 
 /***/ }),
 
@@ -71038,6 +71038,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _redux_cart_cart_action__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../redux/cart/cart.action */ "./resources/js/redux/cart/cart.action.js");
 /* harmony import */ var _sass_components_Menu_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../sass/components/Menu.scss */ "./resources/sass/components/Menu.scss");
 /* harmony import */ var _sass_components_Menu_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_sass_components_Menu_scss__WEBPACK_IMPORTED_MODULE_4__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -71046,13 +71058,27 @@ __webpack_require__.r(__webpack_exports__);
 
 var Menu = function Menu(props) {
   var menu = props.menu,
-      addItem = props.addItem; //stock almost sold out
+      addItem = props.addItem; // quantity useState
 
-  var almostSoldOut = menu.quantity < 10 && menu.quantity > 0;
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(menu.quantity),
+      _useState2 = _slicedToArray(_useState, 2),
+      quantity = _useState2[0],
+      setQuantity = _useState2[1]; //stock almost sold out
+
+
+  var almostSoldOut = quantity < 10 && quantity > 0;
   var highlighted = almostSoldOut ? " highlighted" : ""; //stock already sold out
 
-  var soldOut = menu.quantity == 0;
+  var soldOut = quantity == 0;
   var disabled = soldOut ? " disabled" : "";
+
+  function decreaseQuantity() {
+    console.log(quantity);
+    setQuantity(function (prevValue) {
+      return prevValue - 1;
+    });
+  }
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "menu col-12 col-sm-6 col-lg-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -71072,11 +71098,12 @@ var Menu = function Menu(props) {
     text: "Simpan di Keranjang",
     disabled: soldOut,
     onClick: function onClick() {
-      return addItem(menu);
+      addItem(menu);
+      decreaseQuantity();
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "menu-quantity"
-  }, "Stock: ", menu.quantity)));
+  }, "Stock: ", quantity)));
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
@@ -71880,8 +71907,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Applications/mampstack-7.3.16-1/apache2/htdocs/SASO-pre-order/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Applications/mampstack-7.3.16-1/apache2/htdocs/SASO-pre-order/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\SASO-pre-order\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\SASO-pre-order\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
