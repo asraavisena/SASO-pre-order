@@ -15,11 +15,11 @@ class UserController extends Controller
         return view('admin.users.index', ['users' => $users]);
     }
 
-    // public function show(User $user){
-    //     return view('admin.users.show', [
-    //         'user' => $user
-    //         ]);
-    // }
+    public function show(User $user){
+        return view('admin.users.show', [
+            'user' => $user
+            ]);
+    }
 
     public function create() {
         return view('admin.users.create');

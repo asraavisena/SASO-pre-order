@@ -11,7 +11,7 @@
                     <h4 class=" h4 m-0 font-weight-bold text-primary">USER TABLES</h4>
                 </div>
                 <div class="m-0 float-right">
-                    <a class="btn btn-primary btn-sm" href="{{ route('categories.index') }}" role="button">Show Category</a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('roles.index') }}" role="button">Add a Role</a>
                 </div>
             </div>
             <div class="card-body">
@@ -41,7 +41,7 @@
                     @foreach($users as $user)
                         <tr>
                             <td>{{$user->id}}</td>
-                            <td><a href="">{{$user->name}}</td>
+                            <td><a href="{{route('users.show', $user->id)}}">{{$user->name}}</td>
                             <td>{{$user->username}}</td>
                             <td>{{$user->email}}</td>
                             <td>{{$user->created_at->diffForHumans()}}</td>
