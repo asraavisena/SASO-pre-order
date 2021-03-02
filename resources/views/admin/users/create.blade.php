@@ -3,7 +3,7 @@
     <h1 class="h3 mb-4 text-gray-800">Create an user</h1>
 
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-8">
             <form method="POST" action="{{route('users.store')}}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">

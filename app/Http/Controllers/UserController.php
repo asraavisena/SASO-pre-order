@@ -9,6 +9,12 @@ use Hash;
 class UserController extends Controller
 {
     //
+    public function index() {
+        
+        $users = User::all();
+        return view('admin.users.index', ['users' => $users]);
+    }
+
     // public function show(User $user){
     //     return view('admin.users.show', [
     //         'user' => $user
@@ -16,7 +22,6 @@ class UserController extends Controller
     // }
 
     public function create() {
-
         return view('admin.users.create');
     }
 
@@ -33,6 +38,7 @@ class UserController extends Controller
             'email' => request('email'),
             'password' => Hash::make(request('password')),
         ]);
-        return back();
+        session()->flash('user-created-message', 'User was created');
+        return redirect()->route('users.index');
     }
 }

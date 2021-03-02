@@ -7,7 +7,7 @@
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Users</h6>
         <a class="collapse-item" href="{{route('users.create')}}">Create an User</a>
-        <a class="collapse-item" href="">View all Users</a>
+        <a class="collapse-item" href="{{route('users.index')}}">View all Users</a>
       </div>
     </div>
   </li>
