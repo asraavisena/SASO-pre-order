@@ -62,6 +62,7 @@
 
       <!-- Divider -->
       <hr class="sidebar-divider">
+      <x-admin.sidenav.admin-sidenav-createuser></x-admin.sidenav.admin-sidenav-createuser>
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
