@@ -62,7 +62,9 @@
 
       <!-- Divider -->
       <hr class="sidebar-divider">
+      @if(auth()->user()->userHasRole('Super Admin'))
       <x-admin.sidenav.admin-sidenav-createuser></x-admin.sidenav.admin-sidenav-createuser>
+      @endif
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
