@@ -46,6 +46,12 @@ class UserController extends Controller
         return redirect()->route('users.index');
     }
 
+    public function destroy(User $user, Request $request) {
+        $user->delete();
+        $request->session()->flash('user-destroy-message', 'User deleted: ' . $user->name);
+        return redirect()->route('users.index');
+    }
+
     public function attach(User $user){
         $user->roles()->attach(request('role'));
         return back();

@@ -1,6 +1,6 @@
 <x-admin-master>
     @section('content')
-        <h1 class="h3 mb-4 text-gray-800">Show a menu</h1>
+        <h1 class="h3 mb-4 text-gray-800">Show users</h1>
         
         <div class="row">
             <div class="card-body">
@@ -28,6 +28,20 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="mb-5">
+                <a class="btn btn-light btn-close" href="{{ route('users.index') }}" role="button">Cancel</a></button>
+            </div>
+            <div class="mb-5 ">
+                <form method="POST" action="{{route('users.destroy', $user->id)}}" enctype="multipart/form-data">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+
 
         <div class="row">
            <div class="col-sm-12">
