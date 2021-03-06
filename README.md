@@ -26,3 +26,7 @@ For the storage config: *php artisan storage:link*
 For using this app, *Please migrate the schema using: php artisan migrate*
 
 To run the application on the localhost, *php artisan serve* 
+
+To use seeder, first you should do *php artisan migrate:refresh*
+
+then using *php artisan db:seed*
