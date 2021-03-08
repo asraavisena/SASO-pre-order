@@ -40,7 +40,7 @@
                         @method('DELETE')
                         <button class="btn btn-danger">Delete</button>
                 </form>
-            </div>
+                </div>
             </div>
         </div>
 

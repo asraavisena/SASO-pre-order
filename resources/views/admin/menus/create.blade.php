@@ -1,6 +1,6 @@
 <x-admin-master>
     @section('content')
-    <h1>Create an menu</h1>
+    <h1 class="h3 mb-4 text-gray-800">Create an menu</h1>
 
 
     <form method="POST" action="{{route('menus.store')}}" enctype="multipart/form-data">
