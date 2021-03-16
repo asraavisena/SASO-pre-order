@@ -1,6 +1,6 @@
 <x-admin-master>
     @section('content')
-        <h1 class="h3 mb-4 text-gray-800">Menus</h1>
+        <h1 class="h3 mb-4 text-gray-800">Users</h1>
         @if(session('user-created-message'))
           <div class="alert alert-success">{{session('user-created-message')}}</div>
           @elseif(session('user-destroy-message'))

@@ -4,43 +4,42 @@
         
         <div class="row">
             <div class="card-body">
+                <div class="mb-2 float-left">
+                    <a class="btn btn-light btn-close" href="{{ route('menus.index') }}" role="button">Cancel</a></button>
+                </div>
+                <div class="mb-2 float-right ">
+                    <form method="POST" action="{{route('users.destroy', $user->id)}}" enctype="multipart/form-data">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
                 <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <th>Created At</th>
-                        <th>Updated At</th>
-                    </tr>
-                    </thead>
-                    <tbody>
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
                         <tr>
-                            <td><a href="">{{$user->name}}</td>
-                            <td>{{$user->username}}</td>
-                            <td>{{$user->email}}</td>
-                            <td>{{$user->created_at->diffForHumans()}}</td>
-                            <td>{{$user->updated_at->diffForHumans()}}</td>
+                            <th>Name</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Created At</th>
+                            <th>Updated At</th>
                         </tr>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="">{{$user->name}}</td>
+                                <td>{{$user->username}}</td>
+                                <td>{{$user->email}}</td>
+                                <td>{{$user->created_at->diffForHumans()}}</td>
+                                <td>{{$user->updated_at->diffForHumans()}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="mb-5">
-                <a class="btn btn-light btn-close" href="{{ route('users.index') }}" role="button">Cancel</a></button>
-            </div>
-            <div class="mb-5 ">
-                <form method="POST" action="{{route('users.destroy', $user->id)}}" enctype="multipart/form-data">
-                        @csrf
-                        @method('DELETE')
-                        <button class="btn btn-danger">Delete</button>
-                </form>
-            </div>
-        </div>
+
 
 
         <div class="row">

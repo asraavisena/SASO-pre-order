@@ -5,6 +5,18 @@
         <div class="row">
             <div class="card-body">
                 <div class="table-responsive">
+                    <div class="mb-2 float-left">
+                        <a class="btn btn-primary" href="{{ route('events.edit', $event->id) }}" role="button">Edit</a>
+                        <a class="btn btn-light btn-close" href="{{ route('events.index') }}" role="button">Cancel</a></button>
+                        <a class="btn btn-info" href="{{ route('images.index') }}" role="button">Upload Image</a>
+                    </div>
+                    <div class="mb-2 float-right">
+                        <form method="POST" action="{{route('events.destroy', $event->id)}}" enctype="multipart/form-data">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                         <tr>
@@ -24,18 +36,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="mb-2 float-left">
-                    <a class="btn btn-primary" href="{{ route('events.edit', $event->id) }}" role="button">Edit</a>
-                    <a class="btn btn-light btn-close" href="{{ route('events.index') }}" role="button">Cancel</a></button>
-                    <a class="btn btn-info" href="{{ route('images.index') }}" role="button">Upload Image</a>
-                </div>
-                <div class="mb-2 float-right">
-                    <form method="POST" action="{{route('events.destroy', $event->id)}}" enctype="multipart/form-data">
-                            @csrf
-                            @method('DELETE')
-                            <button class="btn btn-danger">Delete</button>
-                    </form>
-                </div>
+
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
