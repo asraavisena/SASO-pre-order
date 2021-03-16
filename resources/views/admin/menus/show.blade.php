@@ -10,7 +10,6 @@
                     <tr>
                         <th>Id</th>
                         <th>Name</th>
-                        <th>Image</th>
                         <th>Quantity</th>
                         <th>Price in Euro (€)</th>
                         <th>Category</th>
@@ -21,7 +20,6 @@
                         <tr>
                             <td>{{$menu->id}}</td>
                             <td>{{$menu->name}}</td>
-                            <td><img width="100px" src="{{$menu->menu_image}}" alt=""></td>
                             <td>{{$menu->quantity}}</td>
                             <td>{{$menu->price}}</td>
                             <td>{{$menu->category ? $menu->category->name : 'Uncategorized'}}</td>

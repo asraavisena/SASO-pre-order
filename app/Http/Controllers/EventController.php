@@ -38,14 +38,11 @@ class EventController extends Controller
 
         $inputs = $this->validate($request, [
             'name' => 'required',
-            'event_image'=>'mimes:jpeg,png,jpg',
+            
             'desc' => 'required',
             'started_at' => 'required',
         ]);
 
-        if(request('event_image')){
-            $inputs['event_image'] = request('event_image')->store('images');
-        }
 
         Event::create($inputs);
         session()->flash('event-created-message', 'Event was created');
@@ -57,15 +54,9 @@ class EventController extends Controller
     public function update(Event $event){
         $inputs = request()->validate([
             'name' => 'required',
-            'event_image'=>'mimes:jpeg,png,jpg',
             'desc' => 'required',
             'started_at' => 'required',
         ]);
-
-        if(request('event_image')){
-            $inputs['event_image'] = request('event_image')->store('images');
-            $event->event_image = $inputs['event_image'];
-        }
 
         $event->name = $inputs['name'];
         $event->desc = $inputs['desc'];

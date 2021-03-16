@@ -17,16 +17,6 @@
             @enderror
         </div>
         <div class="form-group">
-            <label for="menu_image">Image</label>
-            <div class="mb-2"><img width="150px" src="{{$menu->menu_image}}" alt=""></div>
-            <input type="file" name="menu_image" class="form-control-file @error('menu_image') is-invalid @enderror" id="menu_image">
-            @error('menu_image')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-        <div class="form-group">
             <label for="quantity">Quantity: </label>
             <input type="number" name="quantity" class="form-control-date @error('quantity') is-invalid @enderror"  id="quantity" value="{{$menu->quantity}}">
             @error('quantity')

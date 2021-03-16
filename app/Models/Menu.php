@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Menu extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'menu_image', 'desc', 'quantity', 'price'];
+    protected $fillable = ['name', 'desc', 'quantity', 'price'];
     public $path = "/storage/";
 
     // Accessor; returning something
@@ -20,5 +20,10 @@ class Menu extends Model
 
     public function category(){
         return $this->belongsTo('App\Models\Category', 'category_id');
+    }
+
+    public function images()
+    {
+        return $this->morphMany(Image::class, 'imageable');
     }
 }
