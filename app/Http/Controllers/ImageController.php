@@ -20,17 +20,31 @@ class ImageController extends Controller
     //         ]);
     // }
 
-    public function store(){
-        request()->validate([
-            'name' => 'required'
-        ]);
-        Image::create([
-            'name'=>Str::ucfirst(request('name')),
-            'slug'=>Str::of(Str::lower(request('name')))->slug('_'),
-        ]);
-        session()->flash('image-created-message', 'Image was created');
+    public function store(Request $request, $model, $id) {
+    
+        $file = $request->file('file');
+
+        $images = new Image();
+
+        $images->path = time() . $file->getClientOriginalName();
+        $images->imageable_type = 'App\\Models\\'.$model;
+        $images->imageable_id = $id;
+        $images->save();
+    
         return back();
     }
+
+    // public function store(){
+    //     request()->validate([
+    //         'name' => 'required'
+    //     ]);
+    //     Image::create([
+    //         'name'=>Str::ucfirst(request('name')),
+    //         'slug'=>Str::of(Str::lower(request('name')))->slug('_'),
+    //     ]);
+    //     session()->flash('image-created-message', 'Image was created');
+    //     return back();
+    // }
 
     public function destroy(Image $image, Request $request) {
         $image->delete();

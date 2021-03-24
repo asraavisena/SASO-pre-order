@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Event;
+use App\Models\Image;
 
 // Controller for EVENT SASO
 class EventController extends Controller
@@ -49,6 +50,32 @@ class EventController extends Controller
         return redirect()->route('events.index');
 
         // auth()->user()->posts()->create($inputs);
+    }
+
+    public function upload(Request $request, Event $event){
+
+        $input = $request->all();
+
+        if($file = $request->file('image')){
+            $oriImageName = $file->getClientOriginalName();
+            $newImageName = time() . '-' . $oriImageName;
+            $file->move('images', $newImageName);
+            // $file->store('images')->storeAs('images', $newImageName);
+            
+            $image = new Image;
+            $image->path = $newImageName;
+            $image->label = $request['label'];
+            $event->images()->save($image);
+            
+        }
+
+        // $photo = new Photo;
+        // $photo->image = $file->getClientOriginalName();
+        // $article->photos()->save($photo);
+
+        dd($newImageName);
+        // dd($event->images()->create();
+        // dd($request->file('image')->getClientOriginalName());
     }
 
     public function update(Event $event){
