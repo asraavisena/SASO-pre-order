@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Event;
 use App\Models\Image;
 
@@ -54,28 +55,29 @@ class EventController extends Controller
 
     public function upload(Request $request, Event $event){
 
-        $input = $request->all();
+        $this->validate($request, [
+            'image' =>'mimes:jpeg,png,jpg',
+        ]);
 
-        if($file = $request->file('image')){
-            $oriImageName = $file->getClientOriginalName();
-            $newImageName = time() . '-' . $oriImageName;
-            $file->move('images', $newImageName);
-            // $file->store('images')->storeAs('images', $newImageName);
-            
-            $image = new Image;
-            $image->path = $newImageName;
-            $image->label = $request['label'];
-            $event->images()->save($image);
-            
-        }
+        if($request->hasFile('image')){
+            $file = $request->file('image');   
+            $imageNameWithExt = $file->getClientOriginalName();
+            $imageName = pathinfo($imageNameWithExt, PATHINFO_FILENAME);
+            $extension = $file->getClientOriginalExtension();
+            $newImageName = time() . '-' . $imageName . $extension;
 
-        // $photo = new Photo;
-        // $photo->image = $file->getClientOriginalName();
-        // $article->photos()->save($photo);
+            // it should use store rather than move
+            $file->move('storage/images', $newImageName);
+            // $path = $request->file('image')->storeAs('images', $newImageName);
+            // $file->storeAs('images', $newImageName);
+        }      
+        
+        $image = new Image;
+        $image->path = $newImageName;
+        $image->label = $request['label'];
+        $event->images()->save($image);
 
         dd($newImageName);
-        // dd($event->images()->create();
-        // dd($request->file('image')->getClientOriginalName());
     }
 
     public function update(Event $event){

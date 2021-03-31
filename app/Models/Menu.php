@@ -9,7 +9,7 @@ class Menu extends Model
 {
     use HasFactory;
     protected $fillable = ['name', 'desc', 'quantity', 'price'];
-    public $path = "/storage/";
+    // public $path = "/storage/";
 
     // Accessor; returning something
     public function getMenuImageAttribute($value){
