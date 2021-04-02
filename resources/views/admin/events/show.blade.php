@@ -38,7 +38,7 @@
                 </div>
 
                 <h3>Upload Image</h3>
-                <form action="{{route('events.upload', $event->id)}}" method="POST" enctype="multipart/form-data">
+                <form class="mb-2" action="{{route('events.upload', $event->id)}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')
                     <div class="form-group">
@@ -66,15 +66,23 @@
                             <th>Path</th>
                             <th>Type</th>
                             <th>Label</th>
+                            <th>Delete</th>                            
                         </tr>
                         </thead>
                         <tbody>
                         @foreach($event->images as $image)
                             <tr>
                                 <td>{{$image->id}}</td>
-                                <td>{{$image->path}}</td>
+                                <td><div><img src="{{ asset('storage/images/events/' .$image->path )}}" alt="image" width="100px"></div></td>
                                 <td>{{$image->imageable_type}}</td>
                                 <td>{{$image->label}}</td>
+                                <td>
+                                    <form method="POST" action="{{route('events.imgdelete', $event->id )}}" enctype="multipart/form-data">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="btn btn-danger">Delete</button>
+                                    </form>
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>

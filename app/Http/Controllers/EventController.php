@@ -62,12 +62,15 @@ class EventController extends Controller
         if($request->hasFile('image')){
             $file = $request->file('image');   
             $imageNameWithExt = $file->getClientOriginalName();
+            // $newImageName = time() . '-' . $imageNameWithExt;
+
             $imageName = pathinfo($imageNameWithExt, PATHINFO_FILENAME);
             $extension = $file->getClientOriginalExtension();
-            $newImageName = time() . '-' . $imageName . $extension;
+            $newImageName = time() . '-' . $imageName . '.' . $extension;
 
-            // it should use store rather than move
-            $file->move('storage/images', $newImageName);
+            // SHOULD USE STORE RATHER THAN MOVE
+            $file->move('storage/images/events', $newImageName);
+
             // $path = $request->file('image')->storeAs('images', $newImageName);
             // $file->storeAs('images', $newImageName);
         }      
@@ -77,7 +80,7 @@ class EventController extends Controller
         $image->label = $request['label'];
         $event->images()->save($image);
 
-        dd($newImageName);
+        return back();
     }
 
     public function update(Event $event){
@@ -102,5 +105,12 @@ class EventController extends Controller
         $request->session()->flash('event-destroy-message', 'Event deleted: ' . $event->name);
         // Session::flash('message', 'Post was deleted');
         return redirect()->route('events.index');
+    }
+
+    public function img_delete(Event $event, Request $request) {
+        $event->images()->delete();
+        // $request->session()->flash('event-destroy-message', 'Event deleted: ' . $event->name);
+        // Session::flash('message', 'Post was deleted');
+        return back();
     }
 }
