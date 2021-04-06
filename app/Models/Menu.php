@@ -13,8 +13,8 @@ class Menu extends Model
 
     // Accessor; returning something
     public function getMenuImageAttribute($value){
-        // return asset($value);
-        return $this->path . $value;
+        return asset($value);
+        // return $this->path . $value;
 
     }
 
