@@ -80,6 +80,8 @@ class EventController extends Controller
         $image->label = $request['label'];
         $event->images()->save($image);
 
+        $request->session()->flash('image-upload-message', 'Image has been uploaded');
+
         return back();
     }
 
@@ -108,9 +110,24 @@ class EventController extends Controller
     }
 
     public function img_delete(Event $event, Request $request) {
-        $event->images()->delete();
-        // $request->session()->flash('event-destroy-message', 'Event deleted: ' . $event->name);
-        // Session::flash('message', 'Post was deleted');
+        $ids = array();
+
+        foreach($event->images as $image)
+        {
+            // File::delete($photo->path);
+
+            $ids[] = $image->id;
+        }
+
+        $event->images()->whereId($ids)->delete();
+
+        // Photo::whereIn('id',$ids)->delete();
+
+        // $album->delete();
+
+        // $event->images()->delete();
+        $request->session()->flash('image-destroy-message', 'Image has been deleted');
+        
         return back();
     }
 }

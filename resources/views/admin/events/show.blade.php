@@ -1,7 +1,11 @@
 <x-admin-master>
     @section('content')
         <h1 class="h3 mb-4 text-gray-800">Show an event</h1>
-        
+        @if(session('image-upload-message'))
+          <div class="alert alert-success">{{session('image-upload-message')}}</div>
+        @elseif(session('image-destroy-message'))
+            <div class="alert alert-danger">{{session('image-destroy-message')}}</div>
+        @endif
         <div class="row">
             <div class="card-body">
                 <div class="table-responsive">
