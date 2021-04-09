@@ -5,7 +5,7 @@
         <div class="row">
             <div class="card-body">
                 <div class="mb-2 float-left">
-                    <a class="btn btn-light btn-close" href="{{ route('menus.index') }}" role="button">Cancel</a>
+                    <a class="btn btn-light btn-close" href="{{ route('users.index') }}" role="button">Cancel</a>
                 </div>
                 <div class="mb-2 float-right ">
                     <form method="POST" action="{{route('users.destroy', $user->id)}}" enctype="multipart/form-data">

@@ -70,7 +70,7 @@
                             <th>Path</th>
                             <th>Type</th>
                             <th>Label</th>
-                            <th>Delete</th>                            
+                            <th>Delete photo</th>                            
                         </tr>
                         </thead>
                         <tbody>
