@@ -11,4 +11,7 @@ Route::middleware('auth')->group(function(){
     Route::post('/menus', [App\Http\Controllers\MenuController::class, 'store'])->name('menus.store');
     Route::patch('/menus/{menu}/update', [App\Http\Controllers\MenuController::class, 'update'])->name('menus.update');
     Route::delete('/menus/{menu}/delete', [App\Http\Controllers\MenuController::class, 'destroy'])->name('menus.destroy');
+
+    Route::patch('/menus/{menu}/upload', [App\Http\Controllers\MenuController::class, 'upload'])->name('menus.upload');
+    Route::delete('/menus/{menu}/imgdelete', [App\Http\Controllers\MenuController::class, 'img_delete'])->name('menus.imgdelete');
 });

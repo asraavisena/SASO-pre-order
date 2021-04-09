@@ -23,4 +23,7 @@ Auth::routes();
 
 Route::middleware('auth')->group(function(){
     Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.index'); 
+    Route::post('/images', [App\Http\Controllers\ImageController::class, 'store'])->name('images.store');
+
+
 });

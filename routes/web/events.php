@@ -11,4 +11,7 @@ Route::middleware('auth')->group(function(){
     Route::post('/events', [App\Http\Controllers\EventController::class, 'store'])->name('events.store');
     Route::patch('/events/{event}/update', [App\Http\Controllers\EventController::class, 'update'])->name('events.update');
     Route::delete('/events/{event}/delete', [App\Http\Controllers\EventController::class, 'destroy'])->name('events.destroy');
+
+    Route::patch('/events/{event}/upload', [App\Http\Controllers\EventController::class, 'upload'])->name('events.upload');
+    Route::delete('/events/{event}/imgdelete', [App\Http\Controllers\EventController::class, 'img_delete'])->name('events.imgdelete');
 });

@@ -16,15 +16,6 @@
             @enderror
         </div>
         <div class="form-group">
-            <label for="event_image">Image</label>
-            <input type="file" name="event_image" class="form-control-file @error('event_image') is-invalid @enderror" id="event_image">
-            @error('event_image')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-        <div class="form-group">
             <label for="started_at">Start date:</label>
             <input type="date" name="started_at" class="form-control-date @error('started_at') is-invalid @enderror"  id="started_at">
             @error('started_at')

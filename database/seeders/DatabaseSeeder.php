@@ -22,27 +22,51 @@ class DatabaseSeeder extends Seeder
         // $this->call(UserSeeder::class);
         // $this->call(RoleSeeder::class);
 
-        DB::table('users')->insert([
+        $user1 = DB::table('users')->insert([
+            'name' => 'Suer Admin Saso',
+            'username' => 'super_admin_saso',
+            'email' => 'superadmin@iwkz-saso.com',
+            'password' => bcrypt('saso1234'),
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        $user2 = DB::table('users')->insert([
             'name' => 'Admin Saso',
             'username' => 'admin_saso',
             'email' => 'admin@iwkz-saso.com',
-            'password' => bcrypt('test1234'),
+            'password' => bcrypt('saso1234'),
             'created_at' => now(),
             'updated_at' => now(),
         ]);
 
-        $name = 'Super Admin';
-        $slug = Str::of(Str::lower($name))->slug('_');
+        $name1 = 'Super Admin';
+        $slug1 = Str::of(Str::lower($name1))->slug('_');
 
-        DB::table('roles')->insert([
-            'name' => $name,
-            'slug' => $slug, 
+        $role1 = DB::table('roles')->insert([
+            'name' => $name1,
+            'slug' => $slug1, 
             'created_at' => now(),
             'updated_at' => now(),
         ]);
 
-        $user = \App\Models\User::find(1);
-        $role = \App\Models\Role::find(1);
-        $user->roles()->attach($role);
+        $name2 = 'Admin';
+        $slug2 = Str::of(Str::lower($name2))->slug('_');
+
+        $role2 = DB::table('roles')->insert([
+            'name' => $name2,
+            'slug' => $slug2, 
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        $user1 = \App\Models\User::find(1);
+        $role1 = \App\Models\Role::find(1);
+        $user1->roles()->attach($role1);
+
+        $user2 = \App\Models\User::find(2);
+        $role2 = \App\Models\Role::find(2);
+        $user2->roles()->attach($role2);
+        
     }
 }

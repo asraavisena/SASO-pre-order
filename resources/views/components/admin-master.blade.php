@@ -19,6 +19,9 @@
   <!-- Custom styles for this template-->
   <link href="{{asset('css/sb-admin-2.css')}}" rel="stylesheet">
 
+  <!-- CSS DROPZONE -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.8.1/dropzone.min.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -165,6 +168,11 @@
 
   <!-- Custom scripts for all pages-->
   <script src="{{asset('js/sb-admin-2.js')}}"></script>
+
+  <!-- Upload Image DROPZONE -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.8.1/dropzone.min.js"></script>
+
+ 
 
 </body>
 
