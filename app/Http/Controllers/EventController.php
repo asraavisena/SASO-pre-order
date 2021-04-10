@@ -104,6 +104,7 @@ class EventController extends Controller
 
     public function destroy(Event $event, Request $request) {
         $event->delete();
+        $event->images()->delete();
         $request->session()->flash('event-destroy-message', 'Event deleted: ' . $event->name);
         // Session::flash('message', 'Post was deleted');
         return redirect()->route('events.index');
