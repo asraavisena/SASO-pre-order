@@ -19,8 +19,15 @@ class MenuController extends Controller
 
     public function create() {
         $categories = Category::all();
+        $menus = Menu::all();
 
-        return view('admin.menus.create', ['categories' => $categories]);
+        // dd( $categories ->isEmpty());
+        
+        if ($categories ->isEmpty()){
+            return redirect()->route('categories.index');
+        } else {
+            return view('admin.menus.create', ['categories' => $categories]);
+        }
     }
 
     public function edit(Menu $menu){
