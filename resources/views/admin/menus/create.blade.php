@@ -6,6 +6,27 @@
     <form method="POST" action="{{route('menus.store')}}" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
+            <!-- <label for="event_id">Event: </label> -->
+            
+                @foreach($events as $event)
+                    <input class="form-check-input " 
+                            type="radio" 
+                            value="" 
+                            id="event_id" 
+                            name="event_id"
+                            value= "{{$event->id}}" 
+                            @if ($event->started_at < now() )
+                                disabled
+                            @endif >
+                    <label class="form-check-label mr-5" for="event_id">
+                        {{$event->name}}
+                        {{$event->id}}
+                    </label>
+                @endforeach 
+            
+        </div>
+
+        <div class="form-group">
             <label for="name">Name</label>
             <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="Enter name">
             @error('name')
@@ -46,7 +67,7 @@
             @enderror
         </div>
         
-        <div class="form group">
+        <div class="form-group">
             <label for="desc">Description</label>
             <textarea name="desc" class="form-control @error('desc') is-invalid @enderror" id="body" cols="30" rows="10"></textarea>
             @error('desc')

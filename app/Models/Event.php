@@ -21,4 +21,8 @@ class Event extends Model
     {
         return $this->morphMany(Image::class, 'imageable');
     }
+
+    public function menus(){
+        return $this->hasMany('App\Models\Menu');
+    }
 }

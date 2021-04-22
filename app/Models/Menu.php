@@ -22,6 +22,10 @@ class Menu extends Model
         return $this->belongsTo('App\Models\Category', 'category_id');
     }
 
+    public function event(){
+        return $this->belongsTo('App\Models\Event', 'event_id');
+    }
+
     public function images()
     {
         return $this->morphMany(Image::class, 'imageable');

@@ -5,6 +5,8 @@
           <div class="alert alert-success">{{session('category-created-message')}}</div>
         @elseif(session('category-destroy-message'))
             <div class="alert alert-danger">{{session('category-destroy-message')}}</div>
+        @elseif(session('category-empty-message'))
+            <div class="alert alert-danger">{{session('category-empty-message')}}</div>
         @endif
 
         <div class="row">

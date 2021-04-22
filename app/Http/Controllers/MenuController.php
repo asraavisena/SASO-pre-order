@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Menu;
 use App\Models\Category;
+use App\Models\Event;
 use App\Models\Image;
 
 // Controller for MENU SASO
@@ -20,13 +21,15 @@ class MenuController extends Controller
     public function create() {
         $categories = Category::all();
         $menus = Menu::all();
+        $events = Event::all();
 
         // dd( $categories ->isEmpty());
         
         if ($categories ->isEmpty()){
+            session()->flash('category-empty-message', 'Category is empty');
             return redirect()->route('categories.index');
         } else {
-            return view('admin.menus.create', ['categories' => $categories]);
+            return view('admin.menus.create', ['categories' => $categories, 'events' => $events]);
         }
     }
 
@@ -64,6 +67,7 @@ class MenuController extends Controller
         $menu->price = $request['price'];
         $menu->quantity = $request['quantity'];
         $menu->category_id = $request['category_id'];
+        $menu->event_id = $request['event_id'];
         $menu->save();
 
         // Other way

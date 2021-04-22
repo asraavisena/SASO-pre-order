@@ -10,30 +10,34 @@ use App\Models\Image;
 // Controller for EVENT SASO
 class EventController extends Controller
 {
-    //
+    // show ALL EVENTS page
     public function index() {
         
         $events = Event::all();
         return view('admin.events.index',['events' => $events]);
     }
 
+    // show CREATE EVENT page
     public function create() {
         // $this->authorize('create', Event::class);
         return view('admin.events.create');
     }
 
+    // show EDIT EVENT page
     public function edit(Event $event){
         return view('admin.events.edit', [
             'event' => $event
             ]);
     }
 
+    // show SHOW EVENT page
     public function show(Event $event){
         return view('admin.events.show', [
             'event' => $event
             ]);
     }
 
+    // method to SAVE EVENT
     public function store(Request $request) {
 
         // $this->authorize('create', Event::class);
@@ -53,6 +57,7 @@ class EventController extends Controller
         // auth()->user()->posts()->create($inputs);
     }
 
+    // method to UPLOAD EVENT'S IMAGE
     public function upload(Request $request, Event $event){
 
         $this->validate($request, [
@@ -85,6 +90,7 @@ class EventController extends Controller
         return back();
     }
 
+    // method to UPDATE EVENT
     public function update(Event $event){
         $inputs = request()->validate([
             'name' => 'required',
@@ -102,6 +108,7 @@ class EventController extends Controller
         return redirect()->route('events.index');
     }
 
+    // method to DESTROY EVENT
     public function destroy(Event $event, Request $request) {
         $event->delete();
         $event->images()->delete();
@@ -110,6 +117,7 @@ class EventController extends Controller
         return redirect()->route('events.index');
     }
 
+    // method to DELETE EVENT'S IMAGE
     public function img_delete(Event $event, Request $request) {
         $ids = array();
 

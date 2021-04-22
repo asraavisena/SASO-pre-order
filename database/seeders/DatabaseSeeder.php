@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         // $this->call(RoleSeeder::class);
 
         $user1 = DB::table('users')->insert([
-            'name' => 'Suer Admin Saso',
+            'name' => 'Super Admin Saso',
             'username' => 'super_admin_saso',
             'email' => 'superadmin@iwkz-saso.com',
             'password' => bcrypt('saso1234'),
