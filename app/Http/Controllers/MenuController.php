@@ -135,7 +135,7 @@ class MenuController extends Controller
 
     public function destroy(Menu $menu, Request $request) {
         $menu->delete();
-        $event->images()->delete();
+        $menu->images()->delete();
         $request->session()->flash('menu-destroy-message', 'Menu deleted: ' . $menu->name);
         return redirect()->route('menus.index');
     }

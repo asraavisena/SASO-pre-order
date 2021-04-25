@@ -6,28 +6,18 @@
     <form method="POST" action="{{route('menus.store')}}" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-            <!-- <label for="event_id">Event: </label> -->
-            <div class="form-check ">
+            <label for="event_id">Event for: </label>
+            <select id="event_id" name="event_id" class="form-control @error('event_id') is-invalid @enderror">
+            <option disabled selected value> -- select an option -- </option>
                 @foreach($events as $event)
-                    <input class="form-check-input " 
-                            type="radio" 
-                            value="" 
-                            id="event_id" 
-                            name="event_id"
-                            value= "{{$event->id}}" 
-                            @if ($event->started_at > now() )
-                                @if($event->id == $event->id)
-                                    checked
-                                @endif 
-                            @else
-                                disabled
-                            @endif >
-                    <label class="form-check-label mr-5" for="event_id">
-                        {{$event->name}}
-                        {{$event->id}}
-                    </label>
+                    <option name="event_id" value="{{$event->id}}" style="{{ $event->started_at < date('Y-m-d') ? 'display:none;' : '' }}">{{$event->name}}</option>
                 @endforeach 
-            </div>
+            </select>
+            @error('event_id')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
         </div>
 
         <div class="form-group">
@@ -60,6 +50,7 @@
         <div class="form-group">
             <label for="category_id">Select category: </label>
             <select id="category_id" name="category_id" class="form-control @error('category_id') is-invalid @enderror">
+                <option disabled selected value> -- select an option -- </option>
                 @foreach($categories as $category)
                     <option name="category_id" value="{{$category->id}}">{{$category->name}}</option>
                 @endforeach 
