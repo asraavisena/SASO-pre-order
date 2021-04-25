@@ -7,7 +7,7 @@
         @csrf
         <div class="form-group">
             <!-- <label for="event_id">Event: </label> -->
-            
+            <div class="form-check ">
                 @foreach($events as $event)
                     <input class="form-check-input " 
                             type="radio" 
@@ -15,7 +15,11 @@
                             id="event_id" 
                             name="event_id"
                             value= "{{$event->id}}" 
-                            @if ($event->started_at < now() )
+                            @if ($event->started_at > now() )
+                                @if($event->id == $event->id)
+                                    checked
+                                @endif 
+                            @else
                                 disabled
                             @endif >
                     <label class="form-check-label mr-5" for="event_id">
@@ -23,7 +27,7 @@
                         {{$event->id}}
                     </label>
                 @endforeach 
-            
+            </div>
         </div>
 
         <div class="form-group">

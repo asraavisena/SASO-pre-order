@@ -1,6 +1,6 @@
 <x-admin-master>
     @section('content')
-        <h1 class="h3 mb-4 text-gray-800">{{$category->name}}</h1>
+        <h1 class="h3 mb-4 text-gray-800">{{$event->name}}</h1>
         
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
@@ -17,7 +17,7 @@
                             <th>Name</th>
                             <th>Quantity</th>
                             <th>Price in Euro (€)</th>
-                            <th>Category</th>
+                            <th>Description</th>
                         </tr>
                         </thead>
                         <tfoot>
@@ -26,17 +26,17 @@
                             <th>Name</th>
                             <th>Quantity</th>
                             <th>Price in Euro(€)</th>
-                            <th>Category</th>
+                            <th>Descritption</th>
                         </tr>
                         </tfoot>
                         <tbody>
-                        @foreach($category->menus as $menu)
+                        @foreach($event->menus as $menu)
                             <tr>
                                 <td>{{$menu->id}}</td>
                                 <td><a href="{{route('menus.show', $menu->id)}}">{{$menu->name}}</td>
                                 <td>{{$menu->quantity}}</td>
                                 <td>{{$menu->price}}</td>
-                                <td>{{$menu->category ? $menu->category->name : 'Uncategorized'}}</td>
+                                <td>{{$menu->desc}}</td>
                             </tr>
                         @endforeach
                         </tbody>

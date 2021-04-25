@@ -14,4 +14,6 @@ Route::middleware('auth')->group(function(){
 
     Route::patch('/events/{event}/upload', [App\Http\Controllers\EventController::class, 'upload'])->name('events.upload');
     Route::delete('/events/{event}/imgdelete', [App\Http\Controllers\EventController::class, 'img_delete'])->name('events.imgdelete');
+
+    Route::get('/events/{event}/showmenu', [App\Http\Controllers\EventController::class, 'showmenu'])->name('events.showmenu');
 });

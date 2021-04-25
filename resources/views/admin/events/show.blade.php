@@ -11,6 +11,7 @@
                 <div class="table-responsive">
                     <div class="mb-2 float-left">
                         <a class="btn btn-primary" href="{{ route('events.edit', $event->id) }}" role="button">Edit</a>
+                        <a class="btn btn-primary" href="{{ route('events.showmenu', $event->id) }}" role="button">Show menu</a>
                         <a class="btn btn-light btn-close" href="{{ route('events.index') }}" role="button">Cancel</a>
             
                     </div>

@@ -37,6 +37,13 @@ class EventController extends Controller
             ]);
     }
 
+        // show SHOW MENU FROM EVENT page
+        public function showmenu(Event $event){
+            return view('admin.events.showmenu', [
+                'event' => $event
+                ]);
+        }
+
     // method to SAVE EVENT
     public function store(Request $request) {
 
