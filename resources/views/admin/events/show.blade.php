@@ -10,7 +10,7 @@
         <div class="card shadow mb-4">
             <div class="card-body">
                 <div class="mb-2 float-left">
-                    <a class="btn btn-light btn-close" href="{{ route('events.index') }}" role="button">Cancel</a>
+                    <a class="btn btn-light btn-close" href="{{ url()->previous() }}" role="button">Back</a>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

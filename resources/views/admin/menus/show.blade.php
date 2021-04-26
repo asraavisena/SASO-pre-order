@@ -10,7 +10,7 @@
         <div class="card shadow mb-4">
             <div class="card-body">
                  <div class="mb-2 float-left">
-                    <a class="btn btn-light btn-close" href="{{ route('menus.index') }}" role="button">Cancel</a>
+                    <a class="btn btn-light btn-close" href="{{ url()->previous() }}" role="button">Back</a>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -35,7 +35,7 @@
                                 <td>{{$menu->desc}}</td>
                                 <td>
                                     <div class="d-flex flex-row bd-highlight">
-                                        <a class="btn btn-primary" href="{{ route('menus.edit', $menu->id) }}" role="button">Edit</a>                                        
+                                        <a class="btn btn-primary mr-2" href="{{ route('menus.edit', $menu->id) }}" role="button">Edit</a>                                        
                                         <form method="POST" action="{{route('menus.destroy', $menu->id)}}" enctype="multipart/form-data">
                                                 @csrf
                                                 @method('DELETE')
