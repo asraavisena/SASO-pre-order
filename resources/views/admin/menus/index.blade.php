@@ -28,8 +28,7 @@
                         <th>Quantity</th>
                         <th>Price in Euro (€)</th>
                         <th>Category</th>
-                        <th>Created At</th>
-                        <th>Updated At</th>
+                        <th>Description</th>
                     </tr>
                     </thead>
                     <tfoot>
@@ -39,8 +38,7 @@
                         <th>Quantity</th>
                         <th>Price in Euro(€)</th>
                         <th>Category</th>
-                        <th>Created At</th>
-                        <th>Updated At</th>
+                        <th>Description</th>
                     </tr>
                     </tfoot>
                     <tbody>
@@ -51,8 +49,7 @@
                             <td>{{$menu->quantity}}</td>
                             <td>{{$menu->price}}</td>
                             <td><a href="{{route('categories.show', $menu->category_id)}}" role="button">{{$menu->category ? $menu->category->name : 'Uncategorized'}}</a></td>
-                            <td>{{$menu->created_at->diffForHumans()}}</td>
-                            <td>{{$menu->updated_at->diffForHumans()}}</td>
+                            <td>{{$menu->desc}}</td>
                         </tr>
                     @endforeach
                     </tbody>
