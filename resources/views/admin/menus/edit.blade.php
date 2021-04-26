@@ -8,6 +8,21 @@
         @csrf
         @method('PATCH')
         <div class="form-group">
+            <label for="event_id">Event for: </label>
+            <select id="event_id" name="event_id" class="form-control @error('event_id') is-invalid @enderror">
+                @foreach($events as $event)
+                    <option name="event_id" value="{{$event->id}}" style="{{ $event->started_at < date('Y-m-d') ? 'display:none;' : '' }}"
+                    {{ old('event_id', $menu->event_id) == $event->id ? 'selected' : '' }}>{{$event->name}} {{$menu->event_id}}</option>
+                @endforeach 
+            </select>
+            @error('event_id')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        </div>
+
+        <div class="form-group">
             <label for="name">Name</label>
             <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="Enter name" value="{{$menu->name}}">
             @error('name')

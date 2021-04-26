@@ -19,8 +19,9 @@ class CreateMenusTable extends Migration
             $table->integer('event_id')->nullable()->unsigned()->index();
             $table->string('name');
             $table->text('desc');
-            $table->bigInteger('quantity')->nullable();;
-            $table->float('price', 8, 2)->nullable();;
+            $table->bigInteger('quantity')->nullable();
+            $table->float('price', 8, 2)->nullable();
+            //$table->foreignId('event_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

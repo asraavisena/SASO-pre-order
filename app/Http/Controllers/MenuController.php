@@ -34,9 +34,11 @@ class MenuController extends Controller
     }
 
     public function edit(Menu $menu){
+        $events = Event::all();
         return view('admin.menus.edit', [
             'menu' => $menu,
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'events' => $events
             ]);
     }
 
@@ -118,6 +120,7 @@ class MenuController extends Controller
             'price'         => 'required|regex:/^\d+(\.\d{1,2})?$/',
             'quantity'      => 'required',
             'category_id'   => 'required|numeric',
+            'event_id'   => 'required|numeric',
         ]);
 
         $menu->name = $inputs['name'];
@@ -125,6 +128,7 @@ class MenuController extends Controller
         $menu->price = $inputs['price'];
         $menu->quantity = $inputs['quantity'];
         $menu->category_id = $inputs['category_id'];
+        $menu->event_id = $inputs['event_id'];
         
 
         $menu->save();
