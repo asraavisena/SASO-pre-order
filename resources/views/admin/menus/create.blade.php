@@ -10,7 +10,7 @@
             <select id="event_id" name="event_id" class="form-control @error('event_id') is-invalid @enderror">
             <option disabled selected value> -- select an option -- </option>
                 @foreach($events as $event)
-                    <option name="event_id" value="{{$event->id}}" style="{{ $event->started_at < date('Y-m-d') ? 'display:none;' : '' }}">{{$event->name}}</option>
+                    <option name="event_id" value="{{$event->id}}" >{{$event->name}}</option>
                 @endforeach 
             </select>
             @error('event_id')

@@ -23,13 +23,22 @@ class MenuController extends Controller
         $menus = Menu::all();
         $events = Event::all();
 
+        $dates = array();
+
         // dd( $categories ->isEmpty());
-        
+        foreach($events as $event)
+         {
+            if($event -> started_at > date('Y-m-d') )
+            {
+               $dates[] = $event ;
+            }
+        }
+        //  dd($dates);
         if ($categories ->isEmpty()){
             session()->flash('category-empty-message', 'Category is empty');
             return redirect()->route('categories.index');
         } else {
-            return view('admin.menus.create', ['categories' => $categories, 'events' => $events]);
+            return view('admin.menus.create', ['categories' => $categories, 'events' => $dates]);
         }
     }
 
