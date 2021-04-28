@@ -29,6 +29,7 @@
                         <th>Price in Euro (€)</th>
                         <th>Category</th>
                         <th>Description</th>
+                        <th>Event</th>
                     </tr>
                     </thead>
                     <tfoot>
@@ -39,6 +40,7 @@
                         <th>Price in Euro(€)</th>
                         <th>Category</th>
                         <th>Description</th>
+                        <th>Event</th>
                     </tr>
                     </tfoot>
                     <tbody>
@@ -48,8 +50,11 @@
                             <td><a href="{{route('menus.show', $menu->id)}}">{{$menu->name}}</td>
                             <td>{{$menu->quantity}}</td>
                             <td>{{$menu->price}}</td>
-                            <td><a href="{{route('categories.show', $menu->category_id)}}" role="button">{{$menu->category ? $menu->category->name : 'Uncategorized'}}</a></td>
+                            <td><a href="{{route('categories.show', $menu->category_id)}}" role="button">
+                                {{$menu->category ? $menu->category->name : 'Uncategorized'}}</a></td>
                             <td>{{$menu->desc}}</td>
+                            <td><a href="{{route('events.show', $menu->event_id)}}" role="button">
+                                {{$menu->event ? $menu->event->name : 'Uncategorized'}}</td>
                         </tr>
                     @endforeach
                     </tbody>

@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
         // $this->call(UserSeeder::class);
         // $this->call(RoleSeeder::class);
 
+        /* USERS AND ROLES SEEDER */
         $user1 = DB::table('users')->insert([
             'name' => 'Super Admin Saso',
             'username' => 'super_admin_saso',
@@ -67,6 +68,11 @@ class DatabaseSeeder extends Seeder
         $user2 = \App\Models\User::find(2);
         $role2 = \App\Models\Role::find(2);
         $user2->roles()->attach($role2);
+        /* USERS AND ROLES SEEDER END */
+
+        $this->call(EventSeeder::class);
+        $this->call(CategorySeeder::class);
+        $this->call(MenuSeeder::class);
         
     }
 }
