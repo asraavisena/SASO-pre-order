@@ -17,7 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/react', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index'); 
+Route::get('/react', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
+
+// TEMPORARY WILL BE DELETED
+Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart.index');
+Route::get('/beli', [App\Http\Controllers\MenuController::class, 'beli'])->name('menu.beli');
 
 Auth::routes();
 

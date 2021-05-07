@@ -18,6 +18,13 @@ class MenuController extends Controller
         return view('admin.menus.index', ['menus' => $menus]);
     }
 
+    // TEMPORARY WILL BE DELETED
+    public function beli() {
+        
+        $menus = Menu::all();
+        return view('admin.menus.beli', ['menus' => $menus]);
+    }
+
     public function create() {
         $categories = Category::all();
         $menus = Menu::all();
