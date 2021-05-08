@@ -19,8 +19,9 @@ Route::get('/', function () {
 
 Route::get('/react', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
 
-Route::post('/cart', [App\Http\Controllers\CartController::class, 'store'])->name('cart.store');
 Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart.index');
+Route::post('/cart', [App\Http\Controllers\CartController::class, 'store'])->name('cart.store');
+Route::delete('/cart/{menu}/remove', [App\Http\Controllers\CartController::class, 'remove'])->name('cart.remove');
 
 // TEMPORARY WILL BE DELETED
 Route::get('/beli', [App\Http\Controllers\MenuController::class, 'beli'])->name('menu.beli');

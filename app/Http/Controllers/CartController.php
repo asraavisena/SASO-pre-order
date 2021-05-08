@@ -21,4 +21,10 @@ class CartController extends Controller
         session()->flash('cart-added', 'Menu added in Cart');
         return redirect()->route('cart.index');
     }
+
+    public function remove($id) {
+        Cart::remove($id);
+        session()->flash('cart-removed', 'Menu has been Removed in Cart');
+        return back();
+    }
 }
