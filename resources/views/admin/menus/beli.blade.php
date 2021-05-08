@@ -21,7 +21,6 @@
                 <th>Name</th>
                 <th>Quantity</th>
                 <th>Price in Euro (€)</th>
-                <th>Category</th>
                 <th>Description</th>
                 <th>Action</th>
             </tr>
@@ -32,7 +31,6 @@
                 <th>Name</th>
                 <th>Quantity</th>
                 <th>Price in Euro(€)</th>
-                <th>Category</th>
                 <th>Description</th>
                 <th>Action</th>
             </tr>
@@ -40,15 +38,17 @@
             <tbody>
             @foreach($menus as $menu)
                 <tr>
-                    <td>{{$menu->id}}</td>
-                    <td><a href="{{route('menus.show', $menu->id)}}">{{$menu->name}}</td>
-                    <td>{{$menu->quantity}}</td>
-                    <td>{{$menu->price}}</td>
-                    <td><a href="{{route('categories.show', $menu->category_id)}}" role="button">
-                        {{$menu->category ? $menu->category->name : 'Uncategorized'}}</a></td>
-                    <td>{{$menu->desc}}</td>
-                    <td><a href="{{route('cart.index')}}" role="button">
-                        add to cart</td>
+                <form method="POST" action="{{route('cart.store')}}" enctype="multipart/form-data">
+                    @csrf
+                    <td> <input type="hidden" name="id" value="{{$menu->id}}"> {{$menu->id}}</td>
+                    <td> <input type="hidden" name="name" value="{{$menu->name}}"> {{$menu->name}}</td>
+                    <td> <input type="hidden" name="quantity" value="{{$menu->quantity}}"> {{$menu->quantity}}</td>
+                    <td> <input type="hidden" name="price" value="{{$menu->price}}"> {{$menu->price}}</td>
+                    <td> <input type="hidden" name="desc" value="{{$menu->desc}}"> {{$menu->desc}}</td>
+                    <td>
+                        <button type="submit" name="submit" class="btn btn-primary">Add to Cart</button>
+                    </td>
+                </form>
                 </tr>
             @endforeach
             </tbody>
