@@ -1,4 +1,6 @@
 <!-- // TEMPORARY WILL BE DELETED -->
+@extends('layouts.app')
+@section('content')
 @if(session('cart-added'))
     <div class="alert alert-success">{{session('cart-added')}}</div>
 @elseif(session('cart-removed'))
@@ -10,8 +12,8 @@
 @else
 <h2>No item(s) in Cart</h2>
 @endif
-<div>
-    <table>
+<div class="table-responsive">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
             <tr>
                 <th>Name</th>
@@ -22,12 +24,25 @@
                 <th>Action</th>
             </tr>
         </thead>
+        <tfoot>
+            <tr>
+                <th>Total Sum:</th>
+                <th></th>
+                <th></th>
+                <th><span>{{ Cart::total() }}</span></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </tfoot>
         <tbody>
         @foreach(Cart::content() as $item)
             <tr>
                 <td>{{ $item->name }}</td>
                 <td>{{ $item->price }}</td>
-                <td>{{ $item->qty }}</td>
+                <td><a class="btn btn-increase" href="#">+</a> 
+                    {{ $item->qty }} 
+                    <a class="btn btn-reduce" href="#">-</a>
+                </td>
                 <td>{{ $item->subtotal }}</td>
                 <td>{{ $item->model->desc }}</td>
                 <td>
@@ -42,5 +57,5 @@
         </tbody>
     </table>
     <br>
-    <div>Total Sum:</div><span>{{ Cart::total() }}</span>
 </div>
+@endsection

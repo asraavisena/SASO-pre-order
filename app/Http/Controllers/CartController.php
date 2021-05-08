@@ -22,6 +22,18 @@ class CartController extends Controller
         return redirect()->route('cart.index');
     }
 
+    public function increasedQty($id) {
+        $menu = Cart::get($id);
+        $qty = $menu->qty + 1;
+        Cart::update($id, $qty);
+    }
+
+    public function decreasedQty($id) {
+        $menu = Cart::get($id);
+        $qty = $menu->qty - 1;
+        Cart::update($id, $qty);
+    }
+
     public function remove($id) {
         Cart::remove($id);
         session()->flash('cart-removed', 'Menu has been Removed in Cart');
