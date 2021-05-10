@@ -22,7 +22,7 @@ class MenuController extends Controller
     public function beli() {
         
         $menus = Menu::all();
-        return view('admin.menus.beli', ['menus' => $menus]);
+        return view('beli', ['menus' => $menus]);
     }
 
     public function create() {

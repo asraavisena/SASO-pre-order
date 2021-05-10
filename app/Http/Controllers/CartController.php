@@ -11,7 +11,7 @@ class CartController extends Controller
     // TEMPORARY WILL BE DELETED
     public function index() {
 
-        return view('admin.menus.cart');
+        return view('cart');
     }
 
     public function store(Request $request) {

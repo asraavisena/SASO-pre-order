@@ -31,7 +31,9 @@
                 <th></th>
                 <th><span>{{ Cart::total() }}</span></th>
                 <th></th>
-                <th></th>
+                <th> 
+                    <a class="btn btn-primary" href="{{ route('checkout.index') }}">Add to Cart</a> 
+                </th>
             </tr>
         </tfoot>
         <tbody>

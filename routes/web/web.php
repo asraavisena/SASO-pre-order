@@ -19,6 +19,11 @@ Route::get('/', function () {
 
 Route::get('/react', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
 
+// CHECKOUT
+Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout.index');
+Route::post('/checkout', [App\Http\Controllers\CheckoutController::class, 'store'])->name('checkout.store');
+
+// CART
 Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart.index');
 Route::post('/cart', [App\Http\Controllers\CartController::class, 'store'])->name('cart.store');
 Route::delete('/cart/{menu}/remove', [App\Http\Controllers\CartController::class, 'remove'])->name('cart.remove');
