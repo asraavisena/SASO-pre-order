@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Blank</title>
+  <title>Saso Admin 2 - Blank</title>
 
   <!-- Custom fonts for this template-->
   <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -37,7 +37,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">Saso Admin <sup>2</sup></div>
       </a>
 
       <!-- Divider -->
@@ -61,10 +61,18 @@
       <!-- Nav Item - Pages Collapse Menu -->
       <x-admin.sidenav.admin-sidenav-eventlink></x-admin.sidenav.admin-sidenav-eventlink>
       <x-admin.sidenav.admin-sidenav-menulink></x-admin.sidenav.admin-sidenav-menulink>
-      
+
+      <hr class="sidebar-divider">
+      <div class="sidebar-heading">
+        Orders from user
+      </div>
+      <x-admin.sidenav.admin-sidenav-orders></x-admin.sidenav.admin-sidenav-orders>
 
       <!-- Divider -->
       <hr class="sidebar-divider">
+      <div class="sidebar-heading">
+        Settings
+      </div>
       @if(auth()->user()->userHasRole('Super Admin'))
       <x-admin.sidenav.admin-sidenav-createuser></x-admin.sidenav.admin-sidenav-createuser>
       @endif

@@ -12,6 +12,6 @@ class Order extends Model
                             'billing_province', 'billing_postalcode', 'billing_phone', 'billing_subtotal', 'billing_total'];
 
     public function menus() {
-        return $this->belongsToMany(Menu::class)->withPivot('quantity');
+        return $this->belongsToMany(Menu::class, 'orders_menus')->withPivot('quantity');
     }
 }
