@@ -14,12 +14,6 @@ class ImageController extends Controller
     public function index() {
     }
 
-    // public function show(Image $image){
-    //     return view('admin.images.show', [
-    //         'image' => $image
-    //         ]);
-    // }
-
     public function store(Request $request, $model, $id) {
     
         $file = $request->file('file');

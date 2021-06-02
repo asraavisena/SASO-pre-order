@@ -51,7 +51,7 @@ class EventController extends Controller
 
         $inputs = $this->validate($request, [
             'name' => 'required',
-            
+            'upcoming_event' => '',
             'desc' => 'required',
             'started_at' => 'required',
         ]);
@@ -103,11 +103,13 @@ class EventController extends Controller
             'name' => 'required',
             'desc' => 'required',
             'started_at' => 'required',
+            'upcoming_event' => ''
         ]);
 
         $event->name = $inputs['name'];
         $event->desc = $inputs['desc'];
         $event->started_at = $inputs['started_at'];
+        $event->upcoming_event = $inputs['upcoming_event'];
 
         $event->save();
 

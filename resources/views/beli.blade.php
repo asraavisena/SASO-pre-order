@@ -8,9 +8,6 @@
         <div class="float-left d-inline">
             <h4 class=" h4 m-0 font-weight-bold text-primary">MENU TABLES</h4>
         </div>
-        <div class="m-0 float-right">
-            <a class="btn btn-primary btn-sm" href="{{ route('categories.index') }}" role="button">Show Category</a>
-        </div>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -23,6 +20,7 @@
                 <th>Price in Euro (€)</th>
                 <th>Description</th>
                 <th>Action</th>
+                <th>Event</th>
             </tr>
             </thead>
             <tfoot>
@@ -33,10 +31,12 @@
                 <th>Price in Euro(€)</th>
                 <th>Description</th>
                 <th>Action</th>
+                <th>Event</th>
             </tr>
             </tfoot>
             <tbody>
             @foreach($menus as $menu)
+            @if($menu->event->upcoming_event === 1)
                 <tr>
                 <form method="POST" action="{{route('cart.store')}}" enctype="multipart/form-data">
                     @csrf
@@ -45,11 +45,14 @@
                     <td> <input type="hidden" name="quantity" value="{{$menu->quantity}}"> {{$menu->quantity}}</td>
                     <td> <input type="hidden" name="price" value="{{$menu->price}}"> {{$menu->price}}</td>
                     <td> <input type="hidden" name="desc" value="{{$menu->desc}}"> {{$menu->desc}}</td>
+                    <td><a href="{{route('events.show', $menu->event_id)}}" role="button">
+                                {{$menu->event ? $menu->event->name : 'Uncategorized'}}</td>
                     <td>
                         <button type="submit" name="submit" class="btn btn-primary">Add to Cart</button>
                     </td>
                 </form>
                 </tr>
+                @endif
             @endforeach
             </tbody>
         </table>

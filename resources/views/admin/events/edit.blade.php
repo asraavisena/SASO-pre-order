@@ -34,6 +34,14 @@
                 </span>
             @enderror
         </div>
+        <div class="form-check">
+            <input type="hidden" name="upcoming_event" value="0" id="">
+            <input class="form-check-input" name="upcoming_event" type="checkbox" value="1"
+            {{ $event->upcoming_event == 1 ? 'checked' : '' }}>
+            <label class="form-check-label" for="upcoming_event">
+                Upcoming Event
+            </label>
+        </div>
         <div class="mt-2">
             <div class="mb-2 float-left">
                 <input class="btn btn-primary" type="submit" name="submit">

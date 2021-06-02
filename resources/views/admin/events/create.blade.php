@@ -33,6 +33,12 @@
                 </span>
             @enderror
         </div>
+        <div class="form-check">
+            <input class="form-check-input" name="upcoming_event" type="checkbox" value="1" id="flexCheckDefault">
+            <label class="form-check-label" for="upcoming_event">
+                Upcoming Event
+            </label>
+        </div>
         <input class="btn btn-primary mb-5 mt-2" type="submit" name="submit">
     </form>
     @endsection

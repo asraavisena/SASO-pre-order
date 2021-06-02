@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\OrderMenu;
+use App\Models\Menu;
 use Cart;
 
 class CheckoutController extends Controller
@@ -41,7 +42,16 @@ class CheckoutController extends Controller
             ]);
         }
 
-        dd($order);
-        // return redirect()->route('cart.index');
+        foreach (Cart::content() as $item) {
+            $menu = Menu::find($item->model->id);
+
+            $menu->update(['quantity' => $menu->quantity - $item->qty]);
+        }
+
+        // Destroy items in cart
+        Cart::instance('default')->destroy();
+
+        // dd($order);
+        return redirect()->route('cart.index');
     }
 }

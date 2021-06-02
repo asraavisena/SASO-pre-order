@@ -68,12 +68,18 @@
       </div>
       <x-admin.sidenav.admin-sidenav-orders></x-admin.sidenav.admin-sidenav-orders>
 
+      <hr class="sidebar-divider">
+      <div class="sidebar-heading">
+        Archives
+      </div>
+     
+
       <!-- Divider -->
+      @if(auth()->user()->userHasRole('Super Admin'))
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
         Settings
       </div>
-      @if(auth()->user()->userHasRole('Super Admin'))
       <x-admin.sidenav.admin-sidenav-createuser></x-admin.sidenav.admin-sidenav-createuser>
       @endif
 

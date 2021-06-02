@@ -17,6 +17,7 @@ class CreateEventsTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('desc');
+            $table->boolean('upcoming_event')->default(false);
             $table->date('started_at');
             $table->timestamps();
         });

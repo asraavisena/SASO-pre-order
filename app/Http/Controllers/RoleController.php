@@ -15,12 +15,6 @@ class RoleController extends Controller
         return view('admin.roles.index', ['roles' => $roles]);
     }
 
-    // public function show(Role $role){
-    //     return view('admin.roles.show', [
-    //         'role' => $role
-    //         ]);
-    // }
-
     public function store(){
         request()->validate([
             'name' => 'required'

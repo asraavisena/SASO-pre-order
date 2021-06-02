@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'desc', 'started_at'];
+    protected $fillable = ['name', 'desc', 'started_at', 'upcoming_event'];
     public $path = "/storage/";
 
     // Accessor; returning something

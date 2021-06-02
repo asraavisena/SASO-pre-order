@@ -45,6 +45,7 @@
                     </tfoot>
                     <tbody>
                     @foreach($menus as $menu)
+                        @if($menu->event->upcoming_event === 1)
                         <tr>
                             <td>{{$menu->id}}</td>
                             <td><a href="{{route('menus.show', $menu->id)}}">{{$menu->name}}</td>
@@ -56,6 +57,7 @@
                             <td><a href="{{route('events.show', $menu->event_id)}}" role="button">
                                 {{$menu->event ? $menu->event->name : 'Uncategorized'}}</td>
                         </tr>
+                        @endif
                     @endforeach
                     </tbody>
                 </table>

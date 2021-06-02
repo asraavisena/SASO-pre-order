@@ -21,6 +21,7 @@
                         <th>Id</th>
                         <th>Name</th>
                         <th>Start</th>
+                        <th>Upcoming Event</th>
                         <th>Description</th>
                     </tr>
                     </thead>
@@ -29,6 +30,7 @@
                         <th>Id</th>
                         <th>Name</th>
                         <th>Start</th>
+                        <th>Upcoming Event</th>
                         <th>Description</th>
                     </tr>
                     </tfoot>
@@ -38,6 +40,7 @@
                             <td>{{$event->id}}</td>
                             <td><a href="{{route('events.show', $event->id)}}">{{$event->name}}</td>
                             <td>{{$event->started_at}}</td>
+                            <td>{{$event->upcoming_event}}</td>
                             <td>{{$event->desc}}</td>
                         </tr>
                     @endforeach

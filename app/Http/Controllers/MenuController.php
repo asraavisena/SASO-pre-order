@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Menu;
 use App\Models\Category;
 use App\Models\Event;
@@ -16,6 +17,7 @@ class MenuController extends Controller
         
         $menus = Menu::all();
         return view('admin.menus.index', ['menus' => $menus]);
+        
     }
 
     // TEMPORARY WILL BE DELETED
