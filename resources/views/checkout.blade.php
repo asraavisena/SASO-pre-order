@@ -4,7 +4,7 @@
 @section('content')
 <h1 class="mb-4 text-gray-800">Checkout</h1>
     <div class="container">
-        <form action="" method="POST" id="payment-form"  enctype="multipart/form-data">
+        <form action="{{route('checkout.store')}}" method="POST" id="payment-form"  enctype="multipart/form-data">
             @csrf
             <h2 class="h3 mb-4 text-gray-800">Billing Details</h2>
 

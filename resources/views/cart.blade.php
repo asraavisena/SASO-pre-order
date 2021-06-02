@@ -9,9 +9,6 @@
 
 @if(Cart::count() > 0)
 <h2>{{ Cart::count() }}Item(s) in Cart</h2>
-@else
-<h2>No item(s) in Cart</h2>
-@endif
 <div class="table-responsive">
     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
@@ -32,7 +29,7 @@
                 <th><span>{{ Cart::total() }}</span></th>
                 <th></th>
                 <th> 
-                    <a class="btn btn-primary" href="{{ route('checkout.index') }}">Add to Cart</a> 
+                    <a class="btn btn-primary" href="{{ route('checkout.index') }}">Checkout</a> 
                 </th>
             </tr>
         </tfoot>
@@ -60,4 +57,8 @@
     </table>
     <br>
 </div>
+@else
+<h2>No item(s) in Cart</h2>
+@endif
+
 @endsection
