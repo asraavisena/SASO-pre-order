@@ -15,7 +15,7 @@
                     <h4 class=" h4 m-0 font-weight-bold text-primary">ORDER TABLES</h4>
                 </div>
                 <div class="m-0 float-right">
-                    <a class="btn btn-primary btn-sm" href="{{ route('categories.index') }}" role="button">Show Category</a>
+                    <a class="btn btn-primary btn-sm" href="" role="button">Add Location to Pick up</a>
                 </div>
             </div>
             <div class="card-body">
